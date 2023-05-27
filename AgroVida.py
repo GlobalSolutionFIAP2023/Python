@@ -1,4 +1,3 @@
-#utilizar alguma função
 # def informacoesFrutas():
 #     Frutas = ["banana", "maca", "abacate", "abacaxi", "acai", "acerola", "amora", "pinha", "mirtilo", "cacau", "caja", "caqui", "carambola", "cereja", "cidra", "coco", "cupuacu", "figo", "framboesa", "morango", "abacaxi", "pera", "melancia", "melao", "jabuticaba", "goiaba", "mamao", "laranja", "groselha", "jaca", "jenipapo", "kiwi", "limao", "manga", "maracuja", "pequi", "pessego", "pitanga", "pitaya", "roma", "siriguela", "tamara", "tamarindo", "tangerina", "tucuma", "uva"]
 
@@ -16,54 +15,41 @@
 
 
 def regiao():
-
     print("\n[1] - Norte" +
           "\n[2] - Nordeste" +
           "\n[3] - Centro-Oeste" +
           "\n[4] - Sudeste" +
           "\n[5] - Sul")
-    regiao = int(input("\nDigite o número da região em que você reside: "))
+    regiao = int(input("\nDigite o número da região em que deseja consultar as frutas: "))
     
     match regiao:
         case 1:
-            print("\nNorte Selecionado")
+            print("\n\nA região Norte, apresenta clima: " + 
+                  "\n\n   EQUATORIAL ÚMIDO –> marcado por elevadas temperaturas – e tropical continental, que resulta em duas estações bem definidas (chuvosa e seca).")
             frutasNorte()
         case 2:
-            print("\nNordeste Selecionado")
+            print("\n\nA região Nordeste, apresenta clima: " + 
+                  "\n\n   TROPICAL ÚMIDO ->  Verão quente e úmido, com temperaturas elevadas o ano todo, que variam entre 25 e 31 graus.")
             frutasNordeste()
         case 3:
-            print("\nCentro-Oeste Selecionado")
+            print("\n\nA região Centro-Oeste, apresenta clima: " + 
+                  "\n\n   TROPICAL SEMIÚMIDO ->  Duas estações bem definidas – um inverno seco e um verão muito quente e chuvoso. As temperaturas variam bastante: cerca de 40 °C nos meses mais quentes e 15 °C nos meses mais frios.")
             frutasCentroOeste()
         case 4:
-            print("\nSudeste Selecionado")
+            print("\n\nA região Sudeste, apresenta clima: " + 
+                  "\n\n   TROPICAL  ->  Temperaturas altas e duas estações bem marcadas: o verão chuvoso, e o inverno seco.")
             frutasSudeste()
         case 5:
-            print("\nSul Selecionado")
+            print("\n\nA região Sul, apresenta clima: " + 
+                  "\n\n   SUBTROPICAL  ->  Estações do ano bem diferenciadas, com grandes variações de temperatura. É a região mais fria do País, onde, durante o inverno, ocorrem geadas e até neve em alguns lugares.")
             frutasSul()
 
 
-def frutasNorte():
-    frutas = ["Açaí", "Bacuri", "Camu-Camu", "Cupuaçu", "Guaraná", "Muruci", "Tapereba", "Tucumã"]
-
-    for i in range(0, len(frutas)):
-        print(f" {i+1}º fruta: " + frutas[i])
-
-    continuar = True
-    while(continuar == True):
-        frutaSelecionada = int(input("\nEscolha o número da fruta: "))
-
-        verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
-
-        if(verificacao == "s"):
-            continuar = False
-
-        nomeFruta = frutas[frutaSelecionada-1]
-
+def infoFrutasNorte(nomeFruta):
     opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
                         f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
                         f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}"+
                         "\nQual número? => "))
-    
     match opcao:
         case 1:
             match nomeFruta:
@@ -119,31 +105,32 @@ def frutasNorte():
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com logo")
                 case "Tucumã":
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o húmico")
-    return "Norte"
+def frutasNorte():
+    frutas = ["Açaí", "Bacuri", "Camu-Camu", "Cupuaçu", "Guaraná", "Muruci", "Tapereba", "Tucumã"]
 
-
-def frutasNordeste():
-    frutas = ["Jambo Rosa", "Araçá", "Umbu", "Pitomba", "Sapoti", "Maracujá", "Abacaxi", "Melão", "Banana", "Caju", "Mamão", "Manga", "Laranja"]
-
-    for i in range(0, len(frutas)):
-        print(f" {i+1}º fruta: " + frutas[i])
+    contadorFrutas(frutas)
 
     continuar = True
     while(continuar == True):
         frutaSelecionada = int(input("\nEscolha o número da fruta: "))
 
-        verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
+        if(frutaSelecionada < 1 or frutaSelecionada > 8):
+            print("Fruta inválida!")
+        else:
+            verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
 
-        if(verificacao == "s"):
-            continuar = False
+            if(verificacao == "s"):
+                continuar = False
 
-        nomeFruta = frutas[frutaSelecionada-1]
+    nomeFruta = frutas[frutaSelecionada-1]
+    infoFrutasNorte(nomeFruta)
 
+
+def infoFrutasNordeste(nomeFruta):
     opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
                         f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
                         f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}" +
                         "\nQual número? => "))
-    
     match opcao:
         case 1:
             match nomeFruta:
@@ -229,26 +216,28 @@ def frutasNordeste():
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o seco")
                 case "Laranja":
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o adubado")
-    return "Nordeste"
+def frutasNordeste():
+    frutas = ["Jambo Rosa", "Araçá", "Umbu", "Pitomba", "Sapoti", "Maracujá", "Abacaxi", "Melão", "Banana", "Caju", "Mamão", "Manga", "Laranja"]
 
-
-def frutasCentroOeste():
-    frutas = ["Pequi", "Cajuí", "Cagaita", "Guavira", "Bacuri", "Jatobá", "Cajuzinho-do-cerrado", "Bocaiuva", "Embaúba", "Mama-cadela"]
-
-    for i in range(0, len(frutas)):
-        print(f" {i+1}º fruta: " + frutas[i])
-
+    contadorFrutas(frutas)
+    
     continuar = True
     while(continuar == True):
         frutaSelecionada = int(input("\nEscolha o número da fruta: "))
 
-        verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
+        if(frutaSelecionada < 1 or frutaSelecionada > 13):
+            print("Fruta inválida!")
+        else:
+            verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
 
-        if(verificacao == "s"):
-            continuar = False
+            if(verificacao == "s"):
+                continuar = False
 
-        nomeFruta = frutas[frutaSelecionada-1]
+    nomeFruta = frutas[frutaSelecionada-1]
+    infoFrutasNordeste(nomeFruta)
 
+
+def infoFrutasCentroOeste(nomeFruta):
     opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
                         f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
                         f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}" +
@@ -314,26 +303,28 @@ def frutasCentroOeste():
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com restos mortais")
                 case "Mama-cadela":
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
-    return "CentroOeste"
+def frutasCentroOeste():
+    frutas = ["Pequi", "Cajuí", "Cagaita", "Guavira", "Bacuri", "Jatobá", "Cajuzinho-do-cerrado", "Bocaiuva", "Embaúba", "Mama-cadela"]
 
-
-def frutasSudeste():
-    frutas = ["Laranja", "Limão", "Banana", "Abacate", "Manga", "Uva", "Pera", "Maçã", "Morango", "Jabuticaba"]
-
-    for i in range(0, len(frutas)):
-        print(f" {i+1}º fruta: " + frutas[i])
+    contadorFrutas(frutas)
 
     continuar = True
     while(continuar == True):
         frutaSelecionada = int(input("\nEscolha o número da fruta: "))
 
-        verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
+        if(frutaSelecionada < 1 or frutaSelecionada > 10):
+            print("Fruta inválida!")
+        else:
+            verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
 
-        if(verificacao == "s"):
-            continuar = False
+            if(verificacao == "s"):
+                continuar = False
 
-        nomeFruta = frutas[frutaSelecionada-1]
+    nomeFruta = frutas[frutaSelecionada-1]
+    infoFrutasCentroOeste(nomeFruta)
 
+
+def infoFrutasSudeste(nomeFruta):
     opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
                         f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
                         f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}" +
@@ -405,106 +396,127 @@ def frutasSudeste():
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
                 case "Jabuticaba":
                     print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
-    return "Sudeste"
+def frutasSudeste():
+    frutas = ["Laranja", "Limão", "Banana", "Abacate", "Manga", "Uva", "Pera", "Maçã", "Morango", "Jabuticaba"]
+
+    contadorFrutas(frutas)
+
+    continuar = True
+    while(continuar == True):
+        frutaSelecionada = int(input("\nEscolha o número da fruta: "))
+
+        if(frutaSelecionada < 1 or frutaSelecionada > 10):
+            print("Fruta inválida!")
+        else:
+            verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
+
+            if(verificacao == "s"):
+                continuar = False
+
+    nomeFruta = frutas[frutaSelecionada-1]
+    infoFrutasSudeste(nomeFruta)
 
 
+def infoFrutasSul(nomeFruta):
+    opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
+                        f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
+                        f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}" +
+                        "\nQual número? => "))
+    match opcao:
+        case 1:
+            match nomeFruta:
+                case "Maçã":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 10 meses")
+                    return "Sul"
+                case "Uva":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 8 meses")
+                    return "Sul"
+                case "Ameixa":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 4 meses")
+                    return "Sul"
+                case "Pêssego":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 15 meses")
+                    return "Sul"
+                case "Acerola":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 5 meses")
+                    return "Sul"
+                case "Caqui":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 17 meses")
+                    return "Sul"
+                case "Laranja":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 21 meses")
+                    return "Sul"
+                case "Tangerina":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 3 meses")
+                    return "Sul"
+                case "Limão":
+                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 9 meses")
+                    return "Sul"
+        case 2:
+            match nomeFruta:
+                case "Maçã":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 12 metros aproximadamente")
+                case "Uva":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 5 metros aproximadamente")
+                case "Ameixa":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 9 metros aproximadamente")
+                case "Pêssego":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 5 metros aproximadamente")
+                case "Acerola":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 11 metros aproximadamente")
+                case "Caqui":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 10 metros aproximadamente")
+                case "Laranja":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 2 metros aproximadamente")
+                case "Tangerina":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 13 metros aproximadamente")
+                case "Limão":
+                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 8 metros aproximadamente")
+        case 3:
+            match nomeFruta:
+                case "Maçã":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o húmico")
+                case "Uva":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o vulcânico")
+                case "Ameixa":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o arenoso")
+                case "Pêssego":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o semi-arenoso")
+                case "Acerola":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o de mangue")
+                case "Caqui":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com minhocas")
+                case "Laranja":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com restos mortais")
+                case "Tangerina":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
+                case "Limão":
+                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
 def frutasSul():
     frutas = ["Maçã", "Uva", "Ameixa", "Pêssego", "Acerola", "Caqui", "Laranja", "Tangerina", "Limão"]
     
-    for i in range(0, len(frutas)):
-        print(f" {i+1}º fruta: " + frutas[i])
+    contadorFrutas(frutas)
 
     continuar = True
     while(continuar == True):
         frutaSelecionada = int(input("\nEscolha o número da fruta: "))
         
-        if(frutaSelecionada > 9 or frutaSelecionada == 0):
-            print("Essa fruta não existe em nosso banco de dados!")
-            print("Tente Novamente")
+        if(frutaSelecionada < 1 or frutaSelecionada > 9):
+            print("Fruta inválida!")
         else:
             verificacao = input(f"{frutas[frutaSelecionada-1]} é a fruta que você deseja saber informações?: [s] ou [n]: ")
-            
+
             if(verificacao == "s"):
                 continuar = False
 
-            nomeFruta = frutas[frutaSelecionada-1]
+    nomeFruta = frutas[frutaSelecionada-1]
+    infoFrutasSul(nomeFruta)
 
-    opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
-                        f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
-                        f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}" +
-                        "\nQual número? => "))
-    match opcao:
-        case 1:
-            match nomeFruta:
-                case "Maçã":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 10 meses")
-                    return "Sul"
-                case "Uva":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 8 meses")
-                    return "Sul"
-                case "Ameixa":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 4 meses")
-                    return "Sul"
-                case "Pêssego":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 15 meses")
-                    return "Sul"
-                case "Acerola":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 5 meses")
-                    return "Sul"
-                case "Caqui":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 17 meses")
-                    return "Sul"
-                case "Laranja":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 21 meses")
-                    return "Sul"
-                case "Tangerina":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 3 meses")
-                    return "Sul"
-                case "Limão":
-                    print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de 9 meses")
-                    return "Sul"
-        case 2:
-            match nomeFruta:
-                case "Maçã":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 12 metros aproximadamente")
-                case "Uva":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 5 metros aproximadamente")
-                case "Ameixa":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 9 metros aproximadamente")
-                case "Pêssego":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 5 metros aproximadamente")
-                case "Acerola":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 11 metros aproximadamente")
-                case "Caqui":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 10 metros aproximadamente")
-                case "Laranja":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 2 metros aproximadamente")
-                case "Tangerina":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 13 metros aproximadamente")
-                case "Limão":
-                    print(f"\nO tamanho médio do(a) {nomeFruta} é entre 8 metros aproximadamente")
-        case 3:
-            match nomeFruta:
-                case "Maçã":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o húmico")
-                case "Uva":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o vulcânico")
-                case "Ameixa":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o arenoso")
-                case "Pêssego":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o semi-arenoso")
-                case "Acerola":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o de mangue")
-                case "Caqui":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com minhocas")
-                case "Laranja":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com restos mortais")
-                case "Tangerina":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
-                case "Limão":
-                    print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o com muito adubo")
-    
-    return "Sul"
+
+def contadorFrutas(frutasArray):
+    print("\nCombinando com essa frutas a seguir...")
+    for i in range(0, len(frutasArray)):
+        print(f" {i+1}º fruta: " + frutasArray[i])
 
 
 def tecnicasSustentaveis():
@@ -525,13 +537,14 @@ def tecnicasSustentaveis():
               "\n[3] - Embalagens Recicláveis"))
 
         if(tecRecicle == 1):
-            print("[REALIZAR COLETA SELETIVA DOS RESÍDUOS] => " + "método de coletar e separar os resíduos de acordo com suas características. Ou seja, se os resíduos possuem características similares são segregados e coletados juntos (papel, plástico, vidro, metal e resíduo orgânico). Isso ajuda a reciclagem, tornando-a mais fácil e viável economicamente.")
-
+            print("[REALIZAR COLETA SELETIVA DOS RESÍDUOS] => " + 
+                  "método de coletar e separar os resíduos de acordo com suas características. Ou seja, se os resíduos possuem características similares são segregados e coletados juntos (papel, plástico, vidro, metal e resíduo orgânico). Isso ajuda a reciclagem, tornando-a mais fácil e viável economicamente.")
         elif(tecRecicle == 2):
-            print("[REUTILIZAR OBJETOS] => " + "Sabe aquele pote de requeijão, que é de vidro? Então, você pode reutilizar ele como um copo. Adote esse tipo de pensamento sobre como utilizar uma coisa em outra, tornando o mundo mais sustentável.")
-
+            print("[REUTILIZAR OBJETOS] => " + 
+                  "Sabe aquele pote de requeijão, que é de vidro? Então, você pode reutilizar ele como um copo. Adote esse tipo de pensamento sobre como utilizar uma coisa em outra, tornando o mundo mais sustentável.")
         elif(tecRecicle == 3):
-            print("[EMBALAGENS RECICLÁVEIS] => " + "Opte por usar embalagens recicláveis, que possam ser reutilizadas, após serem lavadas.")
+            print("[EMBALAGENS RECICLÁVEIS] => " + 
+                  "Opte por usar embalagens recicláveis, que possam ser reutilizadas, após serem lavadas.")
     elif(tecnica == 2):
         print("\n\n[CAPTAÇÃO DE ÁGUA DA CHUVA]")
         print("\nA água é um recurso essencial para vida humana, isso é indiscutível, e já existem várias alternativas para suprir a carência de água de qualidade aqui no Brasil, como utilizar os rios e mananciais. E uma excelente alternativa para economizar água em casa e fácil de replicar, que permite o melhor aproveitamento desse recurso natural é a captação de água da chuva e utilizar para tarefas domésticas. \n\nExiste também sistemas de captação de água de chuva, como um tanque de água da chuva usado para coletar e armazenar o escoamento da água da chuva, e outros como uma Cisternas que normalmente é instalada em telhados por meio de tubos, são soluções alternativas eficientes usadas na hora de economizar água. \n\nVale a pena avaliar a possibilidade de instalar um sistema de coleta de água de chuva e/ou simplesmente considerar a possibilidade de armazenar a água de chuva para utilizá-la em tarefas domésticas e assim economizar nosso recurso natural mais importante que é Água. Se cada um contribuir um pouco, o planeta agradece!")
@@ -551,28 +564,31 @@ def tecnicasSustentaveis():
 
 
 
-#COMEÇO DO CHATBOT #COMEÇO DO CHATBOT #COMEÇO DO CHATBOT
+#COMEÇO DO CHATBOT   #COMEÇO DO CHATBOT   #COMEÇO DO CHATBOT
 
-print("Bem vindo ao nosso CHATBOT AgroVida!")
+print("\nBem vindo ao CHATBOT AgroVida!")
 
-print("Em que eu posso lhe ajudar?")
-print("\n[1] - Informações sobre Frutas" + 
-      "\n[2] - Técnicas de Sustentabilidade de Plantio")
+loop = True
+while(loop):
+    print("--------------------------------------")
+    print("\nEm que eu posso lhe ajudar?")
+    print("\n[1] - Informações sobre Frutas" + 
+        "\n[2] - Técnicas de Sustentabilidade de Plantio")
 
-opcao = int(input("\nDigite a opção desejada: "))
+    opcao = int(input("\nDigite a opção desejada: "))
 
-match opcao:
-    case 1:
-        regiao()
-
-        while(finalizacao == "n"):
-            finalizacao = input("\nDeseja finalizar o nosso atendimento? [s] ou [n] -> ")
-
+    match opcao:
+        case 1:
             regiao()
+            print("\nVolte Sempre!")
 
-        print("\nVolte Sempre!")
-
-    case 2:
-        tecnicasSustentaveis()
-
-        print("\nVolte Sempre!")
+        case 2:
+            tecnicasSustentaveis()
+            print("\nVolte Sempre!")
+    
+    continuar = input("\nDeseja realizar outra consulta de informação conosco? [s] ou [n]: ")
+    if(continuar == "s"):
+        loop = True
+    else:
+        loop = False
+        print("\nAjude o nosso planeta a ser mais sustentável, até mais!")

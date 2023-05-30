@@ -9,8 +9,20 @@ frutasCentroOeste = [["Manga","Até 20 metros","3 a 5 anos","Areia e argila"],["
 frutasSudeste = [["Banana","10 metros","9 a 12 meses","Argiloso"],["Laranja","8 metros","9 a 12 meses","Argiloso"],["Limão","6 metros","6 a 9 meses","Argiloso"],["Maçã","4 metros","12 a 14 meses","Arenoso"],["Manga","20 metros","4 a 6 meses","Argiloso"],["Maracujá","5 metros","3 a 4 meses","Argiloso"],["Abacate","15 metros","12 a 18 meses","Argiloso"],["Uva","3 metros","3 a 6 meses","Argiloso"],["Caju","10 metros","2 a 3 meses","Arenoso"],["Pêssego","5 metros","8 a 12 meses","Argiloso"],["Goiaba","10 metros","6 a 8 meses","Argiloso"],["Carambola","6 metros","3 a 4 meses","Argiloso"],["Amora","3 metros","12 a 18 meses","Argiloso"],["Jabuticaba","8 metros","5 a 6 anos","Argiloso"],["Jaca","20 metros","4 a 6 meses","Argiloso"],["Acerola","5 metros","6 a 8 meses","Argiloso"],["Pitanga","5 metros","4 a 6 meses","Argiloso"],["Cacau","10 metros","3 a 5 anos","Argiloso"],["Morango","20 centímetros","3 a 4 meses","Arenoso"],["Mexerica","4 metros","8 a 12 meses","Argiloso"]]
 frutasSul = [["Maçã","8 metros","3-4 anos","Argiloso"],["Uva","2-3 metros","2-3 anos","Arenoso"],["Ameixa","4-5 metros","3-4 anos","Argiloso"],["Pêssego","4-5 metros","2-3 anos","Argiloso"],["Laranja","5-6 metros","2-3 anos","Argiloso"],["Limão","3-4 metros","1-2 anos","Argiloso"],["Banana","5-6 metros","9-12 meses","Argiloso"],["Araçá","2-3 metros","2-3 anos","Argiloso"],["Jabuticaba","8-10 metros","5-7 anos","Argiloso"],["Morango","20-30 centímetros","3-4 meses","Arenoso"],["Cereja","4-5 metros","4-5 anos","Argiloso"],["Pera","4-5 metros","3-4 anos","Argiloso"],["Amaranto","1-2 metros","2-3 meses","Arenoso"],["Abacaxi","1 metro","2-3 anos","Arenoso"],["Amora","2-3 metros","2-3 anos","Argiloso"],["Goiaba","2-3 metros","2-3 anos","Argiloso"],["Pitanga","4-5 metros","2-3 anos","Argiloso"],["Kiwi","5-8 metros","3-4 anos","Argiloso"],["Figo","3-4 metros","2-3 anos","Argiloso"],["Ameixa Amarela","4-5 metros","3-4 anos","Argiloso"]]
 
+
+#ARRAYS DE 'NOME DE VERDURAS', 'ALTURA MÁXIMA', 'TEMPO PRA COLHEITA' E O 'SOLO ADEQUADO PARA PLANTIO', DE ACORDO COM CADA REGIÃO DO BRASIL
+verdurasNorte = [["Alface","20-30cm","30-45 dias","Argiloso"],["Couve","30-60cm","40-60 dias","Argiloso"],["Espinafre","20-30cm","30-40 dias","Argiloso"],["Rúcula","20-30cm","30-40 dias","Argiloso"],["Agrião","20-30cm","30-45 dias","Argiloso"],["Cenoura","20-30cm","90-120 dias","Argiloso"],["Beterraba","20-40cm","60-80 dias","Argiloso"],["Quiabo","80-150cm","50-60 dias","Argiloso"],["Mandioca","1-3m","9-12 meses","Argiloso"],["Maxixe","1-2m","40-50 dias","Argiloso"],["Feijão Verde","30-60cm","60-80 dias","Argiloso"],["Tomate","1-2m","70-90 dias","Argiloso"],["Pepino","30-50cm","50-70 dias","Argiloso"],["Pimentão","40-80cm","70-90 dias","Argiloso"],["Abóbora","30-60cm","70-100 dias","Argiloso"],["Chuchu","2-5m","70-90 dias","Argiloso"],["Berinjela","60-100cm","70-90 dias","Argiloso"],["Cebolinha","20-40cm","60-80 dias","Argiloso"],["Coentro","30-60cm","40-60 dias","Argiloso"],["Salsa","20-30cm","40-60 dias","Argiloso"]]
+verdurasNordeste = [["Alface","20cm","30 a 40 dias","Argiloso"],["Tomate","1,5m","70 a 90 dias","Argiloso"],["Cenoura","30cm","90 a 120 dias","Argiloso"],["Cebola","30cm","80 a 120 dias","Argiloso"],["Repolho","30cm","60 a 80 dias","Argiloso"],["Beterraba","25cm","60 a 90 dias","Argiloso"],["Couve","1m","60 a 90 dias","Argiloso"],["Rabanete","15cm","25 a 35 dias","Argiloso"],["Coentro","60cm","30 a 40 dias","Argiloso"],["Pimentão","1m","70 a 90 dias","Argiloso"],["Quiabo","2m","80 a 120 dias","Argiloso"],["Mandioca","2m","8 a 18 meses","Areia arenosa"],["Maxixe","2m","60 a 90 dias","Argiloso"],["Abóbora","50cm","80 a 120 dias","Argiloso"],["Pepino","1m","50 a 70 dias","Argiloso"],["Pimenta","1m","80 a 100 dias","Argiloso"],["Jiló","1,5m","70 a 90 dias","Argiloso"],["Rúcula","30cm","30 a 40 dias","Argiloso"],["Alho","60cm","6 a 9 meses","Argiloso"],["Manjericão","60cm","90 a 120 dias","Argiloso"]]
+verdurasCentroOeste = [["Alface","20-30cm","30-45 dias","Fértil, bem drenado"],["Rúcula","20-30cm","30-40 dias","Fértil, bem drenado"],["Cenoura","20-30cm","70-90 dias","Fértil, arenoso"],["Beterraba","20-30cm","60-90 dias","Fértil, arenoso"],["Couve","40-60cm","60-80 dias","Fértil, argiloso"],["Repolho","30-40cm","70-90 dias","Fértil, argiloso"],["Brócolis","50-70cm","60-90 dias","Fértil, argiloso"],["Abobrinha","60-90cm","50-60 dias","Fértil, bem drenado"],["Berinjela","60-90cm","70-90 dias","Fértil, bem drenado"],["Quiabo","120-180cm","60-80 dias","Fértil, bem drenado"],["Pepino","60-90cm","50-70 dias","Fértil, bem drenado"],["Tomate","60-180cm","70-90 dias","Fértil, bem drenado"],["Pimentão","60-90cm","60-90 dias","Fértil, bem drenado"],["Cebolinha","15-30cm","30-40 dias","Fértil, bem drenado"],["Salsa","15-30cm","30-40 dias","Fértil, bem drenado"],["Coentro","20-60cm","40-50 dias","Fértil, bem drenado"],["Espinafre","20-30cm","40-50 dias","Fértil, bem drenado"],["Rabanete","15-30cm","20-30 dias","Fértil, arenoso"],["Nabo","20-30cm","50-70 dias","Fértil, arenoso"],["Agrião","10-30cm","30-40 dias","Fértil, bem drenado"]]
+verdurasSudeste = [["Alface","20-30 cm","30-60 dias","Argiloso"],["Couve","60-90 cm","60-90 dias","Argiloso"],["Rúcula","20-30 cm","25-35 dias","Argiloso"],["Espinafre","20-30 cm","30-50 dias","Argiloso"],["Cebolinha","15-30 cm","60-80 dias","Argiloso"],["Salsa","15-30 cm","60-80 dias","Argiloso"],["Tomate","150-200 cm","60-80 dias","Argiloso"],["Pimentão","50-70 cm","80-100 dias","Argiloso"],["Cenoura","20-30 cm","90-120 dias","Areia"],["Beterraba","20-30 cm","60-80 dias","Areia"],["Repolho","30-40 cm","80-120 dias","Argiloso"],["Brócolis","40-60 cm","60-90 dias","Argiloso"],["Couve-flor","40-60 cm","60-90 dias","Argiloso"],["Pepino","100-150 cm","50-70 dias","Argiloso"],["Abobrinha","50-70 cm","50-70 dias","Argiloso"],["Quiabo","100-150 cm","50-70 dias","Argiloso"],["Pimenta","50-100 cm","90-120 dias","Argiloso"],["Berinjela","60-90 cm","60-80 dias","Argiloso"],["Milho","150-200 cm","60-90 dias","Argiloso"],["Feijão","40-60 cm","70-90 dias","Argiloso"]]
+verdurasSul = [["Alface","30 cm","30 a 60 dias","Argiloso"],["Couve","60 cm","60 a 90 dias","Argiloso"],["Repolho","30 a 60 cm","60 a 90 dias","Argiloso"],["Cenoura","30 cm","90 a 120 dias","Argiloso"],["Beterraba","30 cm","60 a 90 dias","Argiloso"],["Rabanete","15 cm","20 a 30 dias","Argiloso"],["Espinafre","30 cm","40 a 60 dias","Argiloso"],["Repolho Roxo","30 a 60 cm","60 a 90 dias","Argiloso"],["Nabo","20 cm","50 a 70 dias","Argiloso"],["Salsinha","30 cm","60 a 90 dias","Argiloso"],["Cebolinha","30 cm","60 a 90 dias","Argiloso"],["Alho-poró","40 cm","90 a 120 dias","Argiloso"],["Agrião","40 cm","30 a 40 dias","Argiloso"],["Beterraba","30 cm","60 a 90 dias","Argiloso"],["Couve-flor","60 cm","60 a 80 dias","Argiloso"],["Brócolis","60 cm","60 a 90 dias","Argiloso"],["Pepino","40 cm","50 a 70 dias","Argiloso"],["Abobrinha","40 cm","40 a 60 dias","Argiloso"],["Berinjela","70 cm","80 a 100 dias","Argiloso"],["Pimentão","60 cm","80 a 100 dias","Argiloso"]]
+
+
+
 #ARRAY FRUTASREGIOES COM OS ARRAYS QUE CONTEM INFORMAÇÕES SOBRE FRUTAS DE CADA REGIÃO DO BRASIL
 frutasRegioes = [frutasNorte, frutasNordeste, frutasCentroOeste, frutasSudeste, frutasSul] 
+verdurasRegioes = [verdurasNorte, verdurasNordeste, verdurasCentroOeste, verdurasSudeste, verdurasSul]
+
 
 
 #FUNÇÃO DE INPUT, QUE TRATA ERROS COM TRY-CATCH, PASSANDO COMO PARÂMETRO (MENSAGEM EXIBIDA NORMALMENTE, TIPO DE VARIÁVEL, MENSAGEM DE POSSÍVEL ERRO E MENSAGEM DE ERRO DEFAULT)
@@ -27,21 +39,23 @@ def inputMaster(mensagem,type,possibleExecpt,execpMensage):
             return response
 
 
+
 #FUNÇÃO COM FOR-EACH, PEGANDO O PARÂMETRO DE ARRAY DE UMA FRUTA DE DETERMINADA REGIÃO E IMPRIMINDO NA TELA, LINHA POR LINHA, ENUMERADAS
-def ImprimirFrutas(frutasArray):
-    print("\nCombinando com essa frutas a seguir...")
-    for i in range(0, len(frutasArray)):
-        print(f" {i+1}º fruta: " + frutasArray[i][0])
+def Imprimir(objArray):
+    print("\nCombinando com essas a seguir...")
+    for i in range(0, len(objArray)):
+        print(f" {i+1}º - " + objArray[i][0])
+
 
 
 #FUNÇÃO QUE IMPRIME AS REGIÕES DO ARRAY DE 'REGIÕES' E REQUERE AO USUÁRIO, ATRAVÉS DO INPUT-MASTER, O NUMERO DE UMA REGIÃO QUE DESEJA CONSULTAR AS FRUTAS
 # A PARTIR DO NÚMERO DO USUÁRIO, ELE ESCOLHE NO ARRAY DE 'CLIMAS', PEGANDO O CLIMA DE DETERMINADA REGIÃO E EXIBINDO NA TELA
 # APÓS ISSO, ELE JOGA O PARÂMETRO 'REGIÃO' NA FUNÇÃO frutasAEscolher()
-def regiao():
+def regiao(parametro):
     for i in range(0,len(regioes)):
         print(f"[{i+1}] - {regioes[i]}")
     
-    regiao = inputMaster("\nDigite o número da região em que deseja saber sobre fruta: ", int, ValueError, "Digite um Numero!!\n")
+    regiao = inputMaster("\nDigite o número da região em que deseja: ", int, ValueError, "Digite um Numero!!\n")
 
     climas = ["A região Norte, apresenta clima:\n\n  EQUATORIAL ÚMIDO –> marcado por elevadas temperaturas – e tropical continental, que resulta em duas estações bem definidas (chuvosa e seca).", "A região Nordeste, apresenta clima:\n\n  TROPICAL ÚMIDO ->  Verão quente e úmido, com temperaturas elevadas o ano todo, que variam entre 25 e 31 graus.", "A região Centro-Oeste, apresenta clima:\n\n   TROPICAL SEMIÚMIDO ->  Duas estações bem definidas – um inverno seco e um verão muito quente e chuvoso. As temperaturas variam bastante: cerca de 40 °C nos meses mais quentes e 15 °C nos meses mais frios.", "A região Sudeste, apresenta clima:\n\n   TROPICAL  ->  Temperaturas altas e duas estações bem marcadas: o verão chuvoso, e o inverno seco.", "A região Sul, apresenta clima:\n\n   SUBTROPICAL  ->  Estações do ano bem diferenciadas, com grandes variações de temperatura. É a região mais fria do País, onde, durante o inverno, ocorrem geadas e até neve em alguns lugares."]
     
@@ -53,7 +67,11 @@ def regiao():
     except Exception as e:
         print(e)
     else:
-        frutasAEscolher(regiao)
+        if(parametro == "fruta"):
+            frutasAEscolher(regiao)
+        elif(parametro == "verdura"):
+            verdurasAEscolher(regiao)
+
 
 
 #FUNÇÃO DE ESCOLHER AS FRUTAS DA REGIÃO ESCOLHIDA, PASSADA POR PARÂMETRO.
@@ -64,7 +82,7 @@ def regiao():
 # APÓS CONFIRMAR, PASSA POR PARÂMETRO O NUMERO DA FRUTA SELECIONADA JUNTO COM O ARRAY PRA EXIBIR AS INFORMAÇÕES SOBRE A FRUTA
 def frutasAEscolher(regiao):
     frutas = frutasRegioes[regiao-1]
-    ImprimirFrutas(frutas) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
+    Imprimir(frutas) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
     i = True
     while i:
         frutaSelecionada = inputMaster("\nEscolha o número da fruta: ", int, ValueError, "Digite um Numero!!")
@@ -76,6 +94,21 @@ def frutasAEscolher(regiao):
             if confirmacao.lower() == "s":
                 i = False
                 infoFruta(frutas[frutaSelecionada-1])
+
+def verdurasAEscolher(regiao):
+    verduras = verdurasRegioes[regiao-1]
+    Imprimir(verduras) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
+    i = True
+    while i:
+        verduraSelecionada = inputMaster("\nEscolha o número da verdura: ", int, ValueError, "Digite um Numero!!")
+        if(verduraSelecionada > len(verduras) or verduraSelecionada < 1):
+            print("Número Inválido!")
+        else:
+            confirmacao = input(f"Deseja saber saber as informações sobre {verduras[verduraSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
+
+            if confirmacao.lower() == "s":
+                i = False
+                infoVerdura(verduras[verduraSelecionada-1])
 
 
 #APÓS PEGAR A FRUTA PELO PARÂMETRO, ARMAZENA NUMA VARIAVEL, PEGANDO APENAS A POSIÇÃO DO NOME
@@ -101,6 +134,27 @@ def infoFruta(fruta):
             condicao = True
             print("Opção Inválida!")
             
+def infoVerdura(verdura):
+    nomeVerdura = verdura[0]
+    condicao = True
+    while condicao:
+        opcao = int(input(f"\n[1] - Tempo para Colheita do(a) {nomeVerdura}" +
+                        f"\n[2] - Qual altura a(o) {nomeVerdura} pode alcançar" +
+                        f"\n[3] - Qual tipo de solo é melhor para plantar a(o) {nomeVerdura}"+
+                        "\nQual número? => "))
+        if opcao == 1:
+            print(f"\nO tempo médio para o(a) {nomeVerdura} ser colhido é de {verdura[1]} meses")
+            condicao = False
+        elif opcao == 2:
+            print(f"\nO tamanho médio do(a) {nomeVerdura} é entre {verdura[2]} metros aproximadamente")
+            condicao = False
+        elif opcao == 3:
+            print(f"\nO tipo de solo mais adequado para o(a) {nomeVerdura} é o {verdura[3]}")
+            condicao = False
+        elif opcao < 1 or opcao > 3:
+            condicao = True
+            print("Opção Inválida!")
+
 
 
 #APÓS O USUÁRIO SELECIONAR A OPÇÃO DE TECNICAS SUSTENTÁVEIS, ELE PERGUNTA QUAL TÉCNICA ELE DESEJA APRENDER
@@ -150,12 +204,15 @@ loop = True
 while(loop):
     opcao = int(input("\nEm que posso te ajudar?" + 
                         "\n\n[1] - Informações sobre Frutas" + 
-                        "\n[2] - Técnicas de Sustentabilidade de Plantio" + 
+                        "\n[2] - Informações sobre Verduras" +
+                        "\n[3] - Técnicas de Sustentabilidade de Plantio" + 
                         "\n\nQual número > "))
     match opcao:
         case 1:
-            regiao()
+            regiao("fruta")
         case 2:
+            regiao("verdura")
+        case 3:
             tecnicasSustentaveis()
 
     continuar = input("\n\n\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")

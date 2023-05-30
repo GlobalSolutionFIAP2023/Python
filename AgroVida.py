@@ -1,20 +1,19 @@
+#ARRAY DE REGIÕES DO BRASIL
 regioes = ["Norte","Nordeste","Centro-Oeste","Sudeste","Sul"]
 
 
-frutasNorte = [["Açaí",10,10,"arenoso"], ["Bacuri",8,17," terra roxa"], ["Camu-Camu",4,9,"de mange"], ["Cupuaçu",15,5,"enxarcado"], ["Guaraná",11,6,"arenoso"], ["Muruci",5,12,"argila"], ["Tapereba",17,3,"com logo"], ["Tucumã",21,20,"húmico"]]
+#ARRAYS DE 'NOME DE FRUTAS', 'ALTURA MÁXIMA', 'TEMPO PRA COLHEITA' E 'SOLO ADEQUADO PARA PLANTIO', DE ACORDO COM CADA REGIÃO DO BRASIL
+frutasNorte = [["Açaí","10-20 metros","2-3 anos","Argiloso e aluvial"], ["Abacaxi","80-100 centímetros","18-24 meses","Areia ou argila"], ["Cupuaçu","10-15 metros","3-4 anos","Argiloso ou arenoso"], ["Bacuri","10-15 metros","8-10 anos","Argiloso e arenoso"], ["Manga","10-30 metros","3-5 anos","Argiloso e arenoso"], ["Caju","5-12 metros","2-3 anos","Areia e argila"], ["Maracujá","2-5 metros","6-8 meses","Argiloso e arenoso"], ["Carambola","3-5 metros","1-2 anos","Argiloso e arenoso"], ["Cupuaçu","10-15 metros","3-4 anos","Argiloso ou arenoso"], ["Buriti","8-15 metros","8-10 anos","Aluvial e úmido"], ["Taperebá","6-10 metros","2-3 anos","Argiloso e arenoso"], ["Acerola","2-3 metros","1-2 anos","Argiloso e arenoso"], ["Pupunha","10-20 metros","2-3 anos","Argiloso e arenoso"], ["Graviola","5-10 metros","3-4 anos","Argiloso e arenoso"], ["Cajá-manga","6-12 metros","2-3 anos","Argiloso e arenoso"], ["Uxi amarelo","10-30 metros","4-5 anos","Argiloso e arenoso"], ["Bacaba","10-20 metros","4-6 anos","Argiloso e aluvial"], ["Pitomba","4-6 metros","3-4 anos","Argiloso e arenoso"], ["Murici","3-5 metros","2-3 anos","Argiloso e arenoso"], ["Ingá","8-15 metros","3-4 anos","Argiloso e arenoso"]]
+frutasNordeste = [["Manga","15 metros","3 a 5 anos","Argiloso"], ["Caju","8 metros","2 a 3 anos","Arenoso"], ["Coco","30 metros","6 a 9 meses","Arenoso"], ["Abacaxi","1 metro","1 a 2 anos","Argiloso"], ["Banana","9 metros","9 a 12 meses","Argiloso"], ["Mamão","5 metros","7 a 9 meses","Argiloso"], ["Maracujá","10 metros","1 a 2 anos","Arenoso"], ["Jabuticaba","8 metros","5 a 7 anos","Argiloso"], ["Graviola","8 metros","4 a 6 anos","Argiloso"], ["Carambola","6 metros","2 a 3 anos","Argiloso"], ["Goiaba","6 metros","2 a 3 anos","Argiloso"], ["Cajá","12 metros","2 a 3 anos","Arenoso"], ["Cupuaçu","15 metros","4 a 5 anos","Argiloso"], ["Jaca","15 metros","4 a 5 anos","Argiloso"], ["Mangaba","10 metros","2 a 3 anos","Arenoso"], ["Cajá-manga","12 metros","2 a 3 anos","Argiloso"], ["Pinha","15 metros","4 a 5 anos","Argiloso"], ["Tamarindo","25 metros","5 a 6 anos","Arenoso"], ["Siriguela","12 metros","3 a 4 anos","Arenoso"], ["Cereja-do-rio-grande","5 metros","2 a 3 anos","Argiloso"]]
+frutasCentroOeste = [["Manga","Até 20 metros","3 a 5 anos","Areia e argila"],["Laranja","Até 10 metros","2 a 3 anos","Areia, argila ou terra roxa"],["Limão","Até 5 metros","1 a 2 anos","Areia, argila ou terra roxa"],["Abacaxi","Até 1 metro","1 a 2 anos","Areia ou argila"],["Goiaba","Até 4 metros","2 a 3 anos","Areia, argila ou terra roxa"],["Jabuticaba","Até 15 metros","5 a 7 anos","Argila ou terra roxa"],["Caju","Até 8 metros","3 a 5 anos","Areia, argila ou terra roxa"],["Maracujá","Até 5 metros","1 a 2 anos","Areia ou argila"],["Carambola","Até 10 metros","3 a 4 anos","Areia, argila ou terra roxa"],["Graviola","Até 10 metros","4 a 6 anos","Areia, argila ou terra roxa"],["Acerola","Até 5 metros","2 a 3 anos","Areia, argila ou terra roxa"],["Mamão","Até 10 metros","6 a 9 meses","Areia, argila ou terra roxa"],["Pitaya","Até 5 metros","1 a 2 anos","Areia, argila ou terra roxa"],["Amora","Até 4 metros","2 a 3 anos","Argila ou terra roxa"],["Uva","Até 3 metros","2 a 3 anos","Areia, argila ou terra roxa"],["Cajá","Até 10 metros","2 a 3 anos","Areia, argila ou terra roxa"],["Banana","Até 10 metros","9 a 12 meses","Areia, argila ou terra roxa"],["Jenipapo","Até 10 metros","3 a 4 anos","Areia, argila ou terra roxa"],["Tamarindo","Até 25 metros","4 a 5 anos","Areia, argila ou terra roxa"],["Pequi","Até 15 metros","6 a 8 anos","Areia, argila ou terra roxa"]]
+frutasSudeste = [["Banana","10 metros","9 a 12 meses","Argiloso"],["Laranja","8 metros","9 a 12 meses","Argiloso"],["Limão","6 metros","6 a 9 meses","Argiloso"],["Maçã","4 metros","12 a 14 meses","Arenoso"],["Manga","20 metros","4 a 6 meses","Argiloso"],["Maracujá","5 metros","3 a 4 meses","Argiloso"],["Abacate","15 metros","12 a 18 meses","Argiloso"],["Uva","3 metros","3 a 6 meses","Argiloso"],["Caju","10 metros","2 a 3 meses","Arenoso"],["Pêssego","5 metros","8 a 12 meses","Argiloso"],["Goiaba","10 metros","6 a 8 meses","Argiloso"],["Carambola","6 metros","3 a 4 meses","Argiloso"],["Amora","3 metros","12 a 18 meses","Argiloso"],["Jabuticaba","8 metros","5 a 6 anos","Argiloso"],["Jaca","20 metros","4 a 6 meses","Argiloso"],["Acerola","5 metros","6 a 8 meses","Argiloso"],["Pitanga","5 metros","4 a 6 meses","Argiloso"],["Cacau","10 metros","3 a 5 anos","Argiloso"],["Morango","20 centímetros","3 a 4 meses","Arenoso"],["Mexerica","4 metros","8 a 12 meses","Argiloso"]]
+frutasSul = [["Maçã","8 metros","3-4 anos","Argiloso"],["Uva","2-3 metros","2-3 anos","Arenoso"],["Ameixa","4-5 metros","3-4 anos","Argiloso"],["Pêssego","4-5 metros","2-3 anos","Argiloso"],["Laranja","5-6 metros","2-3 anos","Argiloso"],["Limão","3-4 metros","1-2 anos","Argiloso"],["Banana","5-6 metros","9-12 meses","Argiloso"],["Araçá","2-3 metros","2-3 anos","Argiloso"],["Jabuticaba","8-10 metros","5-7 anos","Argiloso"],["Morango","20-30 centímetros","3-4 meses","Arenoso"],["Cereja","4-5 metros","4-5 anos","Argiloso"],["Pera","4-5 metros","3-4 anos","Argiloso"],["Amaranto","1-2 metros","2-3 meses","Arenoso"],["Abacaxi","1 metro","2-3 anos","Arenoso"],["Amora","2-3 metros","2-3 anos","Argiloso"],["Goiaba","2-3 metros","2-3 anos","Argiloso"],["Pitanga","4-5 metros","2-3 anos","Argiloso"],["Kiwi","5-8 metros","3-4 anos","Argiloso"],["Figo","3-4 metros","2-3 anos","Argiloso"],["Ameixa Amarela","4-5 metros","3-4 anos","Argiloso"]]
 
-frutasNordeste = [["Jambo Rosa",10, 12, "húmico"], ["Araçá",8,5,"Vulcânico"], ["Umbu",4,9,"arenoso"], ["Pitomba",12,4,"de mangue"], ["Sapoti",10,9,"arenoso"], ["Maracujá",9,20,"alagado"], ["Abacaxi",32,1,"duro"], ["Melão",3,8,"esburacado"], ["Banana",6,2,"Enxarcado"], ["Caju",3,10,"rochoso"], ["Mamão",9,3,"terra roxa"], ["Manga",12,5,"de argila"], ["Laranja",10,9,"vulcanico"]]
-
-frutasCentroOeste = [["Pequi",10,12,"húmico"], ["Cajuí",8,5,"vulcânico"], ["Cagaita",4,9,"arenoso"], ["Guavira",4,10,"de argila"], ["Bacuri",15,9,"arenoso"], ["Jatobá",26,9,"vulcanico"], ["Cajuzinho-do-cerrado",2,19,"arenoso"], ["Bocaiuva",10,8,"de terra roxa"], ["Embaúba",19,12,"de mange"], ["Mama-cadela",19,10,"vulcanico"]]
-
-frutasSudeste = [["Laranja",3,2,"arenoso"], ["Limão",4,1,"arenoso"], ["Banana",4,5,"equatorial"], ["Abacate",10,3,"arenoso"], ["Manga",65,2,"solo cagado"], ["Uva",10,4,"Molhadinho"], ["Pera",19,23,"solo fudido"], ["Maçã",60,5,"rico em filho da puta"], ["Morango",10,2,"sla"], ["Jabuticaba",32,42,"Sem ideia ja"]]
-
-frutasSul = [["Maçã",19,3,"empedrado"], ["Uva",3,2,"rochoso"], ["Ameixa",4,8,"húmico"], ["Pêssego",6,10,"arenoso"], ["Acerola",8,10,"de mângue"], ["Caqui",52,9,"pisoteado"], ["Laranja",1,3,"adubado"], ["Tangerina",5,1,"seco"], ["Limão",8,10,"rochoso"]]
-
-
+#ARRAY FRUTASREGIOES COM OS ARRAYS QUE CONTEM INFORMAÇÕES SOBRE FRUTAS DE CADA REGIÃO DO BRASIL
 frutasRegioes = [frutasNorte, frutasNordeste, frutasCentroOeste, frutasSudeste, frutasSul] 
 
 
+#FUNÇÃO DE INPUT, QUE TRATA ERROS COM TRY-CATCH, PASSANDO COMO PARÂMETRO (MENSAGEM EXIBIDA NORMALMENTE, TIPO DE VARIÁVEL, MENSAGEM DE POSSÍVEL ERRO E MENSAGEM DE ERRO DEFAULT)
 def inputMaster(mensagem,type,possibleExecpt,execpMensage):
     while True:
         try:
@@ -28,6 +27,16 @@ def inputMaster(mensagem,type,possibleExecpt,execpMensage):
             return response
 
 
+#FUNÇÃO COM FOR-EACH, PEGANDO O PARÂMETRO DE ARRAY DE UMA FRUTA DE DETERMINADA REGIÃO E IMPRIMINDO NA TELA, LINHA POR LINHA, ENUMERADAS
+def ImprimirFrutas(frutasArray):
+    print("\nCombinando com essa frutas a seguir...")
+    for i in range(0, len(frutasArray)):
+        print(f" {i+1}º fruta: " + frutasArray[i][0])
+
+
+#FUNÇÃO QUE IMPRIME AS REGIÕES DO ARRAY DE 'REGIÕES' E REQUERE AO USUÁRIO, ATRAVÉS DO INPUT-MASTER, O NUMERO DE UMA REGIÃO QUE DESEJA CONSULTAR AS FRUTAS
+# A PARTIR DO NÚMERO DO USUÁRIO, ELE ESCOLHE NO ARRAY DE 'CLIMAS', PEGANDO O CLIMA DE DETERMINADA REGIÃO E EXIBINDO NA TELA
+# APÓS ISSO, ELE JOGA O PARÂMETRO 'REGIÃO' NA FUNÇÃO frutasAEscolher()
 def regiao():
     for i in range(0,len(regioes)):
         print(f"[{i+1}] - {regioes[i]}")
@@ -47,6 +56,12 @@ def regiao():
         frutasAEscolher(regiao)
 
 
+#FUNÇÃO DE ESCOLHER AS FRUTAS DA REGIÃO ESCOLHIDA, PASSADA POR PARÂMETRO.
+# PEGA UMA VARIÁVEL, SELECIONA O ARRAY 'frutasRegioes[]' PASSANDO O PARAMETRO DO NUMERO DA REGIÃO QUE USUARIO DIGITOU - 1, SELECIONANDO UMA frutaRegiao
+# DEPOIS PUXA A FUNÇÃO DE IMPRIMIR FRUTAS COM O FOR-EACH, PASSANDO O ARRAY DE FRUTAS DA REGIÃO ESCOLHIDA
+# APÓS ISSO, TEM A VERIFICAÇÃO DE SELEÇÃO DA FRUTA QUE O USUÁRIO SELECIONOU, PODENDO NÃO TER NO ARRAY, EXIBINDO UMA MENSAGEM DE ERRO E PEDINDO DENOVO PARA O USUÁRIO DIGITAR O NÚMERO, 
+# E UMA VERIFICAÇÃO COM 'SIM' OU 'NÃO'
+# APÓS CONFIRMAR, PASSA POR PARÂMETRO O NUMERO DA FRUTA SELECIONADA JUNTO COM O ARRAY PRA EXIBIR AS INFORMAÇÕES SOBRE A FRUTA
 def frutasAEscolher(regiao):
     frutas = frutasRegioes[regiao-1]
     ImprimirFrutas(frutas) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
@@ -61,16 +76,10 @@ def frutasAEscolher(regiao):
             if confirmacao.lower() == "s":
                 i = False
                 infoFruta(frutas[frutaSelecionada-1])
-            else:
-                frutasAEscolher(regiao)
 
 
-def ImprimirFrutas(frutasArray):
-    print("\nCombinando com essa frutas a seguir...")
-    for i in range(0, len(frutasArray)):
-        print(f" {i+1}º fruta: " + frutasArray[i][0])
-
-
+#APÓS PEGAR A FRUTA PELO PARÂMETRO, ARMAZENA NUMA VARIAVEL, PEGANDO APENAS A POSIÇÃO DO NOME
+# ENTRA NUM WHILE PARA VERIFICAR A OPÇÃO DIGITADA, PODENDO SER INVÁLIDA E REQUISITANDO NOVAMENTE A SELEÇÃO DA INFORMAÇÃO
 def infoFruta(fruta):
     nomeFruta = fruta[0]
     condicao = True
@@ -94,10 +103,11 @@ def infoFruta(fruta):
             
 
 
-
+#APÓS O USUÁRIO SELECIONAR A OPÇÃO DE TECNICAS SUSTENTÁVEIS, ELE PERGUNTA QUAL TÉCNICA ELE DESEJA APRENDER
+# FAZ UM FOR-EACH DAS TÉCNICAS, PUXANDO APENAS O INDEX DO NOME DAS TÉCNICAS, EXIBINDO AO USUÁRIO E REQUISITANDO O NUMERO DE ESCOLHA
+# SE ESCOLHER RECICLAGEM, FARÁ UM FOR-EACH NOVAMENTE EXIBINDO OS TIPO DE RECICLAGEM, SENDO PUXADO APENAS O INDEX DO NOME DO ARRAY DOS TIPOS DE RECICLAGEM
+# CASO ESCOLHER OUTRO TIPO DE TÉCNICA, EXIBIR O NOME E O CONTEÚDO DO TIPO DE TÉCNICA SUSTENTÁVEL
 def tecnicasSustentaveis():
-    print("\n\n\nQual técnica você deseja aprender?")
-    
     tecnicas = [
                     ["Reciclagem",
                         [
@@ -106,117 +116,38 @@ def tecnicasSustentaveis():
                             ["Embalagens Recicláveis","[EMBALAGENS RECICLÁVEIS] => Opte por usar embalagens recicláveis, que possam ser reutilizadas, após serem lavadas."]
                         ]
                     ],
-                    ["Captação de Água da Chuva", "\n\n[CAPTAÇÃO DE ÁGUA DA CHUVA \nA água é um recurso essencial para vida humana, isso é indiscutível, e já existem várias alternativas para suprir a carência de água de qualidade aqui no Brasil, como utilizar os rios e mananciais. E uma excelente alternativa para economizar água em casa e fácil de replicar, que permite o melhor aproveitamento desse recurso natural é a captação de água da chuva e utilizar para tarefas domésticas. \n\nExiste também sistemas de captação de água de chuva, como um tanque de água da chuva usado para coletar e armazenar o escoamento da água da chuva, e outros como uma Cisternas que normalmente é instalada em telhados por meio de tubos, são soluções alternativas eficientes usadas na hora de economizar água. \n\nVale a pena avaliar a possibilidade de instalar um sistema de coleta de água de chuva e/ou simplesmente considerar a possibilidade de armazenar a água de chuva para utilizá-la em tarefas domésticas e assim economizar nosso recurso natural mais importante que é Água. Se cada um contribuir um pouco, o planeta agradece!"],
-                    ["Restos de alimentos para compostagem","\n[RESTOS DE ALIMENTOS PARA COMPOSTAGEM]\n Existem várias possibilidades de reaproveitamento dos resíduos de alimentos, e a forma mais comum é através da compostagem doméstica, contribuindo para reduzir gases do efeito estufa e o lixo orgânico.\n\n  A compostagem é um processo de reciclagem do lixo orgânico, transforma a matéria orgânica encontrada no lixo em adubo natural, que pode ser usado na agricultura, em jardins e plantas, substituindo o uso de produtos químicos."],
-                    ["Inseticida Natural", "\n Como a sociedade já tem mais conhecimento da necessidade da sustentabilidade, e falamos no tópico acima sobre produzir alimentos orgânicos em casa, então com isso surge também a necessidade de alternativas para o controle biológico de pragas, insetos, pois o tradicional utiliza muita química e que prejudica as plantas e o solo. \n\nOs inseticidas naturais representam essa alternativa para produtores rurais que não querem utilizar agentes químicos em suas lavouras e até mesmo para pessoas comuns que estão em busca de uma solução útil contra a proliferação de insetos em suas residências. \n\nA sugestão é utilizar ingredientes naturais como alho, coentro, hortelã, tabaco, pimenta, essas são algumas opções de inseticidas naturais que podem ser usados para proteger plantações e combater pragas que atacam lavouras ou até mesmo hortas caseiras, contra larvas, borboletas, formigas, pulgões, lagartas, moscas, mosquitos entre outros, ok?"],
-                    ["Horta Orgânica", "\n[HORTA ORGÂNICA]\n Cultivar vegetais em casa, não é uma exclusividade de fazendas e chácaras, é possível ter uma horta orgânica até em espaços pequenos, além de promover o cultivo sem agredir o solo e o meio ambiente. \n\nPara hortas em ambientes internos e na utilização de vasos, potes, garrafas e outros recipientes, seja em hortas verticais ou horizontais, você não deve esquecer de providenciar furos no fundo para evitar o excesso de água no solo, isso pode contribuir para apodrecer as raízes. \n\nEntão a sugestão é se preocupar primeiro com solo que uma parte muito importante, ele precisa ser fofo e rico em nutrientes, isso deixará seus vegetais saudáveis e uma boa dica é utilizar adubos originados de itens naturais, como cascas e restos de vegetais."]
-                ]
+                    ["Captação de Água da Chuva", "\n   [CAPTAÇÃO DE ÁGUA DA CHUVA \nA água é um recurso essencial para vida humana, isso é indiscutível, e já existem várias alternativas para suprir a carência de água de qualidade aqui no Brasil, como utilizar os rios e mananciais. E uma excelente alternativa para economizar água em casa e fácil de replicar, que permite o melhor aproveitamento desse recurso natural é a captação de água da chuva e utilizar para tarefas domésticas. \n\nExiste também sistemas de captação de água de chuva, como um tanque de água da chuva usado para coletar e armazenar o escoamento da água da chuva, e outros como uma Cisternas que normalmente é instalada em telhados por meio de tubos, são soluções alternativas eficientes usadas na hora de economizar água. \n\nVale a pena avaliar a possibilidade de instalar um sistema de coleta de água de chuva e/ou simplesmente considerar a possibilidade de armazenar a água de chuva para utilizá-la em tarefas domésticas e assim economizar nosso recurso natural mais importante que é Água. Se cada um contribuir um pouco, o planeta agradece!"],
 
+                    ["Restos de alimentos para compostagem","\n   [RESTOS DE ALIMENTOS PARA COMPOSTAGEM]\n Existem várias possibilidades de reaproveitamento dos resíduos de alimentos, e a forma mais comum é através da compostagem doméstica, contribuindo para reduzir gases do efeito estufa e o lixo orgânico.\n\n  A compostagem é um processo de reciclagem do lixo orgânico, transforma a matéria orgânica encontrada no lixo em adubo natural, que pode ser usado na agricultura, em jardins e plantas, substituindo o uso de produtos químicos."],
+
+                    ["Inseticida Natural", "\n   [INSETICIDA NATURAL]\n Como a sociedade já tem mais conhecimento da necessidade da sustentabilidade, e falamos no tópico acima sobre produzir alimentos orgânicos em casa, então com isso surge também a necessidade de alternativas para o controle biológico de pragas, insetos, pois o tradicional utiliza muita química e que prejudica as plantas e o solo. \n\nOs inseticidas naturais representam essa alternativa para produtores rurais que não querem utilizar agentes químicos em suas lavouras e até mesmo para pessoas comuns que estão em busca de uma solução útil contra a proliferação de insetos em suas residências. \n\nA sugestão é utilizar ingredientes naturais como alho, coentro, hortelã, tabaco, pimenta, essas são algumas opções de inseticidas naturais que podem ser usados para proteger plantações e combater pragas que atacam lavouras ou até mesmo hortas caseiras, contra larvas, borboletas, formigas, pulgões, lagartas, moscas, mosquitos entre outros, ok?"],
+
+                    ["Horta Orgânica", "\n   [HORTA ORGÂNICA]\n Cultivar vegetais em casa, não é uma exclusividade de fazendas e chácaras, é possível ter uma horta orgânica até em espaços pequenos, além de promover o cultivo sem agredir o solo e o meio ambiente. \n\nPara hortas em ambientes internos e na utilização de vasos, potes, garrafas e outros recipientes, seja em hortas verticais ou horizontais, você não deve esquecer de providenciar furos no fundo para evitar o excesso de água no solo, isso pode contribuir para apodrecer as raízes. \n\nEntão a sugestão é se preocupar primeiro com solo que uma parte muito importante, ele precisa ser fofo e rico em nutrientes, isso deixará seus vegetais saudáveis e uma boa dica é utilizar adubos originados de itens naturais, como cascas e restos de vegetais."]
+                ]
+    
+    print("\n\n\nQual técnica você deseja aprender?")
     for i in range(0,len(tecnicas)):
         print(f"[{i+1}] - {tecnicas[i][0]}")
     tecnica = int(input("\n\nQual numero? -> "))
 
     if tecnica == 1:
         for i in range(0, len(tecnicas[0][1])):
-            print(f"{i+1} - {tecnicas[0][1][i][0]}")
+            print(f"[{i+1}] - {tecnicas[0][1][i][0]}")
             
         escolha = int(input("Qual numero?\n> "))
         print(tecnicas[0][1][escolha-1][1])
     else:
-        print(tecnicas[tecnica][1])
+        print(tecnicas[tecnica-1][1])
     
 
 
-
-
-
-# def dadosUsuario():
-#     nomeUsuario = input("Primeiramente, nos informe seu nome: ")
-#     sobrenomeUsuario = input("Agora seu sobrenome: ")
-#     telefoneUsuario = int(input("Informe seu telefone: "))
-#     idadeUsuario = int(input("Digite sua idade: "))
-
-#     generos = ["Masculino", "Feminino", "Prefiro não dizer"]
-#     for i in range(0, len(generos)):
-#         print(f"{i+1} - {generos[i]}")
-
-#     inputGenero = int(input("Escolha seu gênero: \n> "))
-#     generoUsuario = generos[inputGenero-1]
-
-#     usuario = {"Nome":nomeUsuario,"Sobrenome":sobrenomeUsuario,"Telefone":telefoneUsuario,"Idade":idadeUsuario, "Gênero":generoUsuario}
-
-#     i = 0
-#     for key in usuario:
-#         i = i + 1
-#         print(f"\n[{i}] - {key}: {usuario[key]}")
-#     print("\n[6] - Prosseguir com o atendimento...")
-    
-#     dadosUsuario = True
-#     while (dadosUsuario):
-#         alterarDado = int(input("Qual dado você deseja alterar? \n> "))
-
-#         if(alterarDado == 1):
-#             nomeUsuario = input("Informe seu nome: ")
-#             print("Nome Atualizado -> " + nomeUsuario)
-
-#         elif(alterarDado == 2):
-#             sobrenomeUsuario = input("Informe seu sobrenome: ")
-#             print("Sobrenome Atualizado -> " + sobrenomeUsuario)
-
-#         elif(alterarDado == 3):
-#             telefoneUsuario = int(input("Informe seu telefone: "))
-#             print("Telefone Atualizado -> " + telefoneUsuario)
-
-#         elif(alterarDado == 4):
-#             idadeUsuario = int(input("Digite sua idade: "))
-#             print("Idade Atualizada -> " + str(idadeUsuario))
-
-#         elif(alterarDado == 5):
-#             for i in range(0, len(generos)):
-#                 print(f"[{i+1}] - {generos[i]}")
-#             inputGenero = int(input("Escolha seu gênero: \n> "))
-#             generoUsuario = generos[inputGenero-1]
-#             print("Gênero Atualizado -> " + generos[inputGenero-1])
-
-#         elif(alterarDado == 6):
-#             print("\nSEU PERFIL: \n")
-#             i = 0
-#             for key in usuario:
-#                 i = i + 1
-#                 print(f"[{i}] - {key}: {usuario[key]}")
-#             dadosUsuario = False
-
-# roles = [("admin", "123"), ("juca", "0000")]
-# def rolesUser():
-#     nicknameLogin = input("Digite seu usuário: ")
-#     passwordLogin = input("Digite sua senha: ")
-
-#     if nicknameLogin == roles[0][0] and passwordLogin == roles[0][1]:
-#         print(f"\n\nBem Vindo {roles[0][0]}!")
-#         print("Você é um usuário Administrador!\n")
-#         return roles[0][0]
-#     elif nicknameLogin == roles[1][0] and passwordLogin == roles[1][1]:
-#         print(f"\n\nBem Vindo {roles[1][0]}!")
-#         print("Você é um usuário comum!\n")
-#         return roles[1][0]
-#     else:
-#         print("\nUsuário não encontrado, tente novamente!")
-#         return "invalido"
-    
 
 #COMEÇO DO CHATBOT   #COMEÇO DO CHATBOT   #COMEÇO DO CHATBOT
-
 print("\nBem vindo ao CHATBOT AgroVida!")
+
+# EXIBE AS OPÇÕES DE ESCOLHA DO USUÁRIO, COM UM LOOP, PARA PODER REFAZER O PROCESSO DE CONSULTA DE INFORMAÇÕES DO NOSSO CHATBOT
 loop = True
-# usuarioLogado = rolesUser()
-
 while(loop):
-    # if usuarioLogado == roles[0][0]:
-    #     print("Funcao do usuario admin")
-    # elif usuarioLogado == "invalido":
-    #     break
-
-    # elif usuarioLogado == roles[1][0]:
     opcao = int(input("\nEm que posso te ajudar?" + 
                         "\n\n[1] - Informações sobre Frutas" + 
                         "\n[2] - Técnicas de Sustentabilidade de Plantio" + 
@@ -227,11 +158,7 @@ while(loop):
         case 2:
             tecnicasSustentaveis()
 
-    # if(usuarioLogado == roles[1][0]):
-    continuar = input("\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")
-    # elif(usuarioLogado == roles[0][0]):
-        # continuar = input("\nDeseja alterar/inserir mais alguma coisa? [s] ou [n] \n> ")
-        
+    continuar = input("\n\n\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")
     if(continuar.lower() == "s"):
         loop = True
     else:

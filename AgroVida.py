@@ -18,11 +18,18 @@ verdurasSudeste = [["Alface","20-30 cm","30-60 dias","Argiloso"],["Couve","60-90
 verdurasSul = [["Alface","30 cm","30 a 60 dias","Argiloso"],["Couve","60 cm","60 a 90 dias","Argiloso"],["Repolho","30 a 60 cm","60 a 90 dias","Argiloso"],["Cenoura","30 cm","90 a 120 dias","Argiloso"],["Beterraba","30 cm","60 a 90 dias","Argiloso"],["Rabanete","15 cm","20 a 30 dias","Argiloso"],["Espinafre","30 cm","40 a 60 dias","Argiloso"],["Repolho Roxo","30 a 60 cm","60 a 90 dias","Argiloso"],["Nabo","20 cm","50 a 70 dias","Argiloso"],["Salsinha","30 cm","60 a 90 dias","Argiloso"],["Cebolinha","30 cm","60 a 90 dias","Argiloso"],["Alho-poró","40 cm","90 a 120 dias","Argiloso"],["Agrião","40 cm","30 a 40 dias","Argiloso"],["Beterraba","30 cm","60 a 90 dias","Argiloso"],["Couve-flor","60 cm","60 a 80 dias","Argiloso"],["Brócolis","60 cm","60 a 90 dias","Argiloso"],["Pepino","40 cm","50 a 70 dias","Argiloso"],["Abobrinha","40 cm","40 a 60 dias","Argiloso"],["Berinjela","70 cm","80 a 100 dias","Argiloso"],["Pimentão","60 cm","80 a 100 dias","Argiloso"]]
 
 
+#ARRAYS DE 'NOME DE LEGUMES', 'ALTURA MÁXIMA', 'TEMPO PRA COLHEITA' E O 'SOLO ADEQUADO PARA PLANTIO', DE ACORDO COM CADA REGIÃO DO BRASIL
+legumesNorte = [["Abóbora","Até 2 metros","90 a 120 dias","Fértil e bem drenado"],["Batata-doce","Varia de acordo com a variedade","90 a 150 dias","Areia, argila ou misto"],["Berinjela","Até 1,5 metros","80 a 100 dias","Areia argilosa ou argila"],["Cenoura","Até 30 cm","70 a 120 dias","Areia e argila"],["Chuchu","Até 5 metros","100 a 120 dias","Areia argilosa ou argila"],["Couve-flor","Até 80 cm","60 a 90 dias","Argiloso e rico em matéria orgânica"],["Espinafre","Até 30 cm","40 a 50 dias","Argiloso e rico em matéria orgânica"],["Feijão","Varia de acordo com a variedade","70 a 120 dias","Argiloso e rico em matéria orgânica"],["Jiló","Até 1 metro","90 a 120 dias","Areia argilosa ou argila"],["Mandioca","Até 3 metros","8 a 24 meses","Areia argilosa ou argila"],["Milho","Varia de acordo com a variedade","60 a 120 dias","Argiloso e bem drenado"],["Pimentão","Até 1,5 metros","70 a 100 dias","Argiloso e bem drenado"],["Quiabo","Até 2 metros","50 a 60 dias","Areia argilosa ou argila"],["Rabanete","Até 20 cm","20 a 30 dias","Argiloso e bem drenado"],["Repolho","Até 60 cm","70 a 90 dias","Argiloso e bem drenado"],["Rúcula","Até 30 cm","40 a 60 dias","Argiloso e bem drenado"],["Tomate","Varia de acordo com a variedade","60 a 90 dias","Argiloso e bem drenado"],["Vagem","Até 2 metros","50 a 70 dias","Argiloso e bem drenado"],["Abobrinha","Até 60 cm","40 a 60 dias","Argiloso e bem drenado"],["Pepino","Até 60 cm","40 a 60 dias","Argiloso e bem drenado"]]
+legumesNordeste = [["Mandioca","Até 5 metros","6 a 18 meses","Argiloso ou arenoso"],["Feijão","Até 1,5 metros","2 a 4 meses","Argiloso"],["Milho","Até 3 metros","2 a 4 meses","Argiloso"],["Abóbora","Até 50 centímetros","3 a 5 meses","Areia ou argila"],["Tomate","Até 2 metros","2 a 3 meses","Argiloso ou arenoso"],["Cenoura","Até 60 centímetros","3 a 4 meses","Areia ou argila"],["Batata-doce","Até 2 metros","3 a 5 meses","Areia ou argila"],["Maxixe","Até 2 metros","2 a 4 meses","Argiloso ou arenoso"],["Quiabo","Até 2 metros","2 a 3 meses","Argiloso"],["Pimentão","Até 1,5 metros","2 a 4 meses","Argiloso"],["Cebola","Até 1 metro","2 a 3 meses","Argiloso"],["Aipim","Até 2 metros","8 a 12 meses","Argiloso ou arenoso"],["Beterraba","Até 60 centímetros","2 a 3 meses","Argiloso"],["Berinjela","Até 1,5 metros","2 a 3 meses","Argiloso"],["Pimenta","Até 1 metro","2 a 4 meses","Argiloso"],["Coentro","Até 60 centímetros","1 a 2 meses","Argiloso"],["Abobrinha","Até 1,5 metros","2 a 3 meses","Argiloso"],["Rabanete","Até 30 centímetros","1 a 2 meses","Areia ou argila"],["Couve","Até 60 centímetros","2 a 3 meses","Argiloso"],["Pepino","Até 2 metros","2 a 3 meses","Argiloso"]]
+legumesCentroOeste = [["Abóbora","Até 50 cm","90 a 120 dias","Argiloso"],["Batata-doce","Até 30 cm","90 a 120 dias","Arenoso"],["Berinjela","Até 1,5 m","60 a 90 dias","Argiloso"],["Cebola","Até 60 cm","90 a 150 dias","Argiloso"],["Cenoura","Até 40 cm","90 a 120 dias","Arenoso"],["Chuchu","Até 3 m","90 a 150 dias","Argiloso"],["Couve","Até 60 cm","60 a 90 dias","Arenoso"],["Feijão","Até 60 cm","80 a 120 dias","Arenoso"],["Jiló","Até 1 m","90 a 120 dias","Argiloso"],["Mandioca","Até 3 m","8 a 24 meses","Argiloso"],["Milho","Até 3 m","80 a 120 dias","Argiloso"],["Pepino","Até 1,5 m","60 a 90 dias","Argiloso"],["Pimentão","Até 1,5 m","80 a 120 dias","Argiloso"],["Quiabo","Até 1,5 m","60 a 90 dias","Argiloso"],["Repolho","Até 60 cm","80 a 120 dias","Arenoso"],["Rúcula","Até 30 cm","40 a 60 dias","Arenoso"],["Tomate","Até 1,5 m","60 a 90 dias","Argiloso"],["Vagem","Até 2 m","60 a 90 dias","Argiloso"],["Abobrinha","Até 50 cm","40 a 60 dias","Arenoso"],["Quiuí","Até 5 m","3 a 5 anos","Arenoso"]]
+legumesSudeste = [["Cenoura","30-40 cm","90-110 dias","Areia arenosa"],["Alface","20-30 cm","40-50 dias","Argiloso"],["Tomate","120-180 cm","70-90 dias","Argiloso"],["Beterraba","20-30 cm","60-80 dias","Argiloso"],["Pimentão","50-70 cm","70-90 dias","Argiloso"],["Abóbora","40-60 cm","90-120 dias","Argiloso"],["Cebola","20-30 cm","90-110 dias","Argiloso"],["Pepino","30-40 cm","50-70 dias","Areia arenosa"],["Repolho","30-40 cm","70-90 dias","Argiloso"],["Brócolis","50-70 cm","60-80 dias","Areia arenosa"],["Batata","30-50 cm","90-110 dias","Argiloso"],["Vagem","40-60 cm","50-70 dias","Areia arenosa"],["Quiabo","120-150 cm","90-110 dias","Argiloso"],["Couve","30-40 cm","50-70 dias","Areia arenosa"],["Rúcula","20-30 cm","30-40 dias","Areia arenosa"],["Abobrinha","40-60 cm","50-70 dias","Areia arenosa"],["Berinjela","60-80 cm","80-100 dias","Argiloso"],["Pimenta","30-40 cm","80-100 dias","Areia arenosa"],["Chuchu","20-30 cm","70-90 dias","Areia arenosa"],["Mandioca","100-150 cm","8-12 meses","Areia arenosa"],["Pepino japonês","20-30 cm","40-50 dias","Areia arenosa"]]
+legumesSul = [["Batata","40-60 cm","70-120 dias","Argiloso"],["Cenoura","20-30 cm","80-120 dias","Arenoso"],["Beterraba","20-40 cm","60-90 dias","Arenoso"],["Repolho","30-50 cm","70-100 dias","Argiloso"],["Tomate","60-180 cm","60-90 dias","Argiloso"],["Alface","15-30 cm","50-70 dias","Argiloso"],["Cebola","20-40 cm","90-120 dias","Arenoso"],["Abóbora","30-60 cm","90-120 dias","Arenoso"],["Pepino","30-60 cm","50-70 dias","Argiloso"],["Pimentão","30-90 cm","60-90 dias","Argiloso"],["Couve-flor","30-60 cm","60-85 dias","Argiloso"],["Ervilha","60-90 cm","60-80 dias","Arenoso"],["Rabanete","10-30 cm","20-30 dias","Argiloso"],["Brócolis","60-90 cm","60-90 dias","Argiloso"],["Espinafre","20-40 cm","40-60 dias","Arenoso"],["Pimenta","30-90 cm","80-100 dias","Arenoso"],["Quiabo","100-150 cm","60-90 dias","Argiloso"],["Feijão","30-90 cm","80-120 dias","Arenoso"],["Berinjela","60-120 cm","70-90 dias","Argiloso"],["Abobrinha","20-60 cm","40-60 dias","Argiloso"]]
+
 
 #ARRAY FRUTASREGIOES COM OS ARRAYS QUE CONTEM INFORMAÇÕES SOBRE FRUTAS DE CADA REGIÃO DO BRASIL
 frutasRegioes = [frutasNorte, frutasNordeste, frutasCentroOeste, frutasSudeste, frutasSul] 
 verdurasRegioes = [verdurasNorte, verdurasNordeste, verdurasCentroOeste, verdurasSudeste, verdurasSul]
-
+legumesRegioes = [legumesNorte, legumesNordeste, legumesCentroOeste, legumesSudeste, legumesSul]
 
 
 #FUNÇÃO DE INPUT, QUE TRATA ERROS COM TRY-CATCH, PASSANDO COMO PARÂMETRO (MENSAGEM EXIBIDA NORMALMENTE, TIPO DE VARIÁVEL, MENSAGEM DE POSSÍVEL ERRO E MENSAGEM DE ERRO DEFAULT)
@@ -71,6 +78,8 @@ def regiao(parametro):
             frutasAEscolher(regiao)
         elif(parametro == "verdura"):
             verdurasAEscolher(regiao)
+        elif(parametro == "legume"):
+            legumesAEscolher(regiao)
 
 
 
@@ -90,7 +99,6 @@ def frutasAEscolher(regiao):
             print("Número Inválido!")
         else:
             confirmacao = input(f"Deseja saber saber as informações sobre {frutas[frutaSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
-
             if confirmacao.lower() == "s":
                 i = False
                 infoFruta(frutas[frutaSelecionada-1])
@@ -105,11 +113,23 @@ def verdurasAEscolher(regiao):
             print("Número Inválido!")
         else:
             confirmacao = input(f"Deseja saber saber as informações sobre {verduras[verduraSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
-
             if confirmacao.lower() == "s":
                 i = False
                 infoVerdura(verduras[verduraSelecionada-1])
 
+def legumesAEscolher(regiao):
+    legumes = legumesRegioes[regiao-1]
+    Imprimir(legumes) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
+    i = True
+    while i:
+        legumeSelecionada = inputMaster("\nEscolha o número da verdura: ", int, ValueError, "Digite um Numero!!")
+        if(legumeSelecionada > len(legumes) or legumeSelecionada < 1):
+            print("Número Inválido!")
+        else:
+            confirmacao = input(f"Deseja saber saber as informações sobre {legumes[legumeSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
+            if confirmacao.lower() == "s":
+                i = False
+                infoLegume(legumes[legumeSelecionada-1])
 
 #APÓS PEGAR A FRUTA PELO PARÂMETRO, ARMAZENA NUMA VARIAVEL, PEGANDO APENAS A POSIÇÃO DO NOME
 # ENTRA NUM WHILE PARA VERIFICAR A OPÇÃO DIGITADA, PODENDO SER INVÁLIDA E REQUISITANDO NOVAMENTE A SELEÇÃO DA INFORMAÇÃO
@@ -155,6 +175,26 @@ def infoVerdura(verdura):
             condicao = True
             print("Opção Inválida!")
 
+def infoLegume(legume):
+    nomeLegume = legume[0]
+    condicao = True
+    while condicao:
+        opcao = int(input(f"\n[1] - Tempo para Colheita do(a) {nomeLegume}" +
+                        f"\n[2] - Qual altura a(o) {nomeLegume} pode alcançar" +
+                        f"\n[3] - Qual tipo de solo é melhor para plantar a(o) {nomeLegume}"+
+                        "\nQual número? => "))
+        if opcao == 1:
+            print(f"\nO tempo médio para o(a) {nomeLegume} ser colhido é de {legume[1]} meses")
+            condicao = False
+        elif opcao == 2:
+            print(f"\nO tamanho médio do(a) {nomeLegume} é entre {legume[2]} metros aproximadamente")
+            condicao = False
+        elif opcao == 3:
+            print(f"\nO tipo de solo mais adequado para o(a) {nomeLegume} é o {legume[3]}")
+            condicao = False
+        elif opcao < 1 or opcao > 3:
+            condicao = True
+            print("Opção Inválida!")
 
 
 #APÓS O USUÁRIO SELECIONAR A OPÇÃO DE TECNICAS SUSTENTÁVEIS, ELE PERGUNTA QUAL TÉCNICA ELE DESEJA APRENDER
@@ -205,7 +245,8 @@ while(loop):
     opcao = int(input("\nEm que posso te ajudar?" + 
                         "\n\n[1] - Informações sobre Frutas" + 
                         "\n[2] - Informações sobre Verduras" +
-                        "\n[3] - Técnicas de Sustentabilidade de Plantio" + 
+                        "\n[3] - Informações sobre Legumes" +
+                        "\n[4] - Técnicas de Sustentabilidade de Plantio" + 
                         "\n\nQual número > "))
     match opcao:
         case 1:
@@ -213,6 +254,8 @@ while(loop):
         case 2:
             regiao("verdura")
         case 3:
+            regiao("legume")
+        case 4:
             tecnicasSustentaveis()
 
     continuar = input("\n\n\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")

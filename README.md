@@ -1,6 +1,6 @@
 # AGROVIDA
 ____
-> ### **DESCRIÇÃO DO PROJETO**
+> ### -**DESCRIÇÃO DO PROJETO**
 >> ##### Nós da AgroVida, fomos desafiados a criar um projeto para ajudar na fome e sustentabilidade de alimentos, e nisso criamos um sistema que se encaixa nessa proposta. Ele é focado para agricultores rurais e urbanos, facilitando a divulgação de informações sobre frutas, legumes e verduras e ampliando o conhecimento sobre o plantio e técnicas sustentáveis, que podemos utilizar no cotidiano, melhorando a sustentabilidade do planeta.
 >> ##### Através disso, criamos uma tecnologia que separa as frutas, os legumes e as verduras pela região do Brasil, sendo elas: Norte, Nordeste, Centro-Oeste, Sudeste e Sul, contendo alimentos que se adaptam melhor ao plantio, com o clima dessas regiões. Após essa separação, trazemos dados relativos sobre o solo apropriado para o alimento específico; Tempo até a colheita; e o Tamanho máximo que a planta pode chegar.
 >> ##### Além desses dados, trazemos informações sobre medidas sustentáveis, que cada um pode aplicar no seu Dia-a-Dia, como: Reciclagem, podendo ser Coleta Seletiva dos Resíduos, Reutilização de Objetos e Adotar a utilização de Embalagens Recicláveis; Captação de Água da Chuva, utilizando recursos como calhas que levam a água para reservatórios, podendo ser reutilizados para limpeza do quintal e regar plantas; Compostagem de alimentos, utilizando restos de alimentos (casca de frutas...) como adubo natural para plantas; Criação de Inseticidas Naturais, mantendo a fruta orgânica, não sendo prejudicial à saúde do nosso corpo e a Criação de Hortas Orgânicas.
@@ -8,7 +8,7 @@ ____
 >.
 ____
 ____
-> ### **INSTRUÇÕES DE USO**
+> ### -**INSTRUÇÕES DE USO**
 >> ##### - Ao executar o programa, ele exibirá uma mensagem de Boas Vindas, juntamente com dados pertinentes sobre a escolha de consulta do usuário
 >> ##### - Ele requisitará o usuário, qual o número do tipo de informação ele deseja consultar
 >> ##### - Após a seleção das opções, o sistema requisitará informação sobre a região em que o usuário deseja filtrar os alimentos
@@ -19,7 +19,7 @@ ____
 >.
 ____
 ____
-> ### **REQUISITOS**
+> ### -**REQUISITOS**
 >> ##### - Deverá ter 3 listas com 20 itens, contendo 'nome', 'tamanho máximo da planta' e 'tempo de colheita' sobre frutas, verduras e legumes
 >> ##### - Funções, para aproveitamento de códigos
 >> ##### - Estruturas de repetição

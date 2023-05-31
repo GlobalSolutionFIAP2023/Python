@@ -1,8 +1,8 @@
 (../img/logo)
-# !!!{c:brown}AGROVIDA{/c}
+# {c:brown}AGROVIDA{/c}
 
 
-
+____
 > ### **DESCRIÇÃO DO PROJETO**
 > > ##### Nós da AgroVida, fomos desafiados a criar um projeto para ajudar na fome e sustentabilidade de alimentos, e nisso criamos um sistema que se encaixa nessa proposta. Ele é focado para agricultores rurais e urbanos, facilitando a divulgação de informações sobre frutas, legumes e verduras e ampliando o conhecimento sobre o plantio e técnicas sustentáveis, que podemos utilizar no cotidiano, melhorando a sustentabilidade do planeta.
 > > ##### Através disso, criamos uma tecnologia que separa as frutas, os legumes e as verduras pela região do Brasil, sendo elas: Norte, Nordeste, Centro-Oeste, Sudeste e Sul, contendo alimentos que se adaptam melhor ao plantio, com o clima dessas regiões. Após essa separação, trazemos dados relativos sobre o solo apropriado para o alimento específico; Tempo até a colheita; e o Tamanho máximo que a planta pode chegar.
@@ -40,3 +40,4 @@ ____
 >> ##### - Possuir menu de boas vindas, contendo uma mensagem de recepção
 >> ##### - Exibir mensagem de finalização, agradecendo o usuário pela utilização do sistema
 >> ##### - Obter no código, as regiões 'norte', 'nordeste', 'centro-oeste', 'sudeste' e 'sul' do Brasil
+_____

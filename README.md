@@ -1,6 +1,4 @@
-(../img/logo)
-# {c:brown}AGROVIDA{/c}
-
+!!!! AGROVIDA
 
 ____
 > ### **DESCRIÇÃO DO PROJETO**

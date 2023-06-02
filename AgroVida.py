@@ -23,7 +23,6 @@ legumesCentroOeste = [["Abóbora","Até 50 cm","90 a 120 dias","Argiloso"],["Bat
 legumesSudeste = [["Cenoura","30-40 cm","90-110 dias","Areia arenosa"],["Alface","20-30 cm","40-50 dias","Argiloso"],["Tomate","120-180 cm","70-90 dias","Argiloso"],["Beterraba","20-30 cm","60-80 dias","Argiloso"],["Pimentão","50-70 cm","70-90 dias","Argiloso"],["Abóbora","40-60 cm","90-120 dias","Argiloso"],["Cebola","20-30 cm","90-110 dias","Argiloso"],["Pepino","30-40 cm","50-70 dias","Areia arenosa"],["Repolho","30-40 cm","70-90 dias","Argiloso"],["Brócolis","50-70 cm","60-80 dias","Areia arenosa"],["Batata","30-50 cm","90-110 dias","Argiloso"],["Vagem","40-60 cm","50-70 dias","Areia arenosa"],["Quiabo","120-150 cm","90-110 dias","Argiloso"],["Couve","30-40 cm","50-70 dias","Areia arenosa"],["Rúcula","20-30 cm","30-40 dias","Areia arenosa"],["Abobrinha","40-60 cm","50-70 dias","Areia arenosa"],["Berinjela","60-80 cm","80-100 dias","Argiloso"],["Pimenta","30-40 cm","80-100 dias","Areia arenosa"],["Chuchu","20-30 cm","70-90 dias","Areia arenosa"],["Mandioca","100-150 cm","8-12 meses","Areia arenosa"],["Pepino japonês","20-30 cm","40-50 dias","Areia arenosa"]]
 legumesSul = [["Batata","40-60 cm","70-120 dias","Argiloso"],["Cenoura","20-30 cm","80-120 dias","Arenoso"],["Beterraba","20-40 cm","60-90 dias","Arenoso"],["Repolho","30-50 cm","70-100 dias","Argiloso"],["Tomate","60-180 cm","60-90 dias","Argiloso"],["Alface","15-30 cm","50-70 dias","Argiloso"],["Cebola","20-40 cm","90-120 dias","Arenoso"],["Abóbora","30-60 cm","90-120 dias","Arenoso"],["Pepino","30-60 cm","50-70 dias","Argiloso"],["Pimentão","30-90 cm","60-90 dias","Argiloso"],["Couve-flor","30-60 cm","60-85 dias","Argiloso"],["Ervilha","60-90 cm","60-80 dias","Arenoso"],["Rabanete","10-30 cm","20-30 dias","Argiloso"],["Brócolis","60-90 cm","60-90 dias","Argiloso"],["Espinafre","20-40 cm","40-60 dias","Arenoso"],["Pimenta","30-90 cm","80-100 dias","Arenoso"],["Quiabo","100-150 cm","60-90 dias","Argiloso"],["Feijão","30-90 cm","80-120 dias","Arenoso"],["Berinjela","60-120 cm","70-90 dias","Argiloso"],["Abobrinha","20-60 cm","40-60 dias","Argiloso"]]
 
-
 #ARRAY FRUTASREGIOES, VERDURASREGIOES E LEGUMESREGIOES COM OS ARRAYS QUE CONTEM INFORMAÇÕES SOBRE FRUTAS, VERDURAS E LEGUMES DE CADA REGIÃO DO BRASIL
 frutasRegioes = [frutasNorte, frutasNordeste, frutasCentroOeste, frutasSudeste, frutasSul] 
 verdurasRegioes = [verdurasNorte, verdurasNordeste, verdurasCentroOeste, verdurasSudeste, verdurasSul]
@@ -43,19 +42,15 @@ def inputMaster(mensagem,type,possibleExecpt,execpMensage):
         else:
             return response
 
-
-
-#FUNÇÃO COM FOR-EACH, PEGANDO O PARÂMETRO DE ARRAY DE UMA FRUTA DE DETERMINADA REGIÃO E IMPRIMINDO NA TELA, LINHA POR LINHA, ENUMERADAS
+#FUNÇÃO COM FOR-EACH, PEGANDO O PARÂMETRO DE ARRAY DE UM ALIMENTO DE DETERMINADA REGIÃO E IMPRIMINDO NA TELA, LINHA POR LINHA, ENUMERADAS
 def Imprimir(objArray):
-    print("\nCombinando com essas a seguir...")
     for i in range(0, len(objArray)):
         print(f" {i+1}º - " + objArray[i][0])
 
 
-
-#FUNÇÃO QUE IMPRIME AS REGIÕES DO ARRAY DE 'REGIÕES' E REQUERE AO USUÁRIO, ATRAVÉS DO INPUT-MASTER, O NUMERO DE UMA REGIÃO QUE DESEJA CONSULTAR AS FRUTAS
+#FUNÇÃO QUE IMPRIME AS REGIÕES DO ARRAY DE 'REGIÕES' E REQUERE AO USUÁRIO, ATRAVÉS DO INPUT-MASTER, O NUMERO DE UMA REGIÃO QUE DESEJA CONSULTAR AS FRUTAS, LEGUMES E VERDURAS
 # A PARTIR DO NÚMERO DO USUÁRIO, ELE ESCOLHE NO ARRAY DE 'CLIMAS', PEGANDO O CLIMA DE DETERMINADA REGIÃO E EXIBINDO NA TELA
-# APÓS ISSO, ELE JOGA O PARÂMETRO 'REGIÃO' NA FUNÇÃO frutasAEscolher()
+# APÓS ISSO, ELE JOGA O PARÂMETRO 'REGIÃO' NA FUNÇÃO frutasAEscolher(), CASO FOR FRUTAS, OU legumesAEscolher(), CASO FOR LEGUMES, OU verdurasAEscolher(), CASO FOR VERDURAS
 def regiao(parametro):
     for i in range(0,len(regioes)):
         print(f"[{i+1}] - {regioes[i]}")
@@ -81,12 +76,12 @@ def regiao(parametro):
 
 
 
-#FUNÇÃO DE ESCOLHER AS FRUTAS DA REGIÃO ESCOLHIDA, PASSADA POR PARÂMETRO.
-# PEGA UMA VARIÁVEL, SELECIONA O ARRAY 'frutasRegioes[]' PASSANDO O PARAMETRO DO NUMERO DA REGIÃO QUE USUARIO DIGITOU - 1, SELECIONANDO UMA frutaRegiao
-# DEPOIS PUXA A FUNÇÃO DE IMPRIMIR FRUTAS COM O FOR-EACH, PASSANDO O ARRAY DE FRUTAS DA REGIÃO ESCOLHIDA
-# APÓS ISSO, TEM A VERIFICAÇÃO DE SELEÇÃO DA FRUTA QUE O USUÁRIO SELECIONOU, PODENDO NÃO TER NO ARRAY, EXIBINDO UMA MENSAGEM DE ERRO E PEDINDO DENOVO PARA O USUÁRIO DIGITAR O NÚMERO, 
-# E UMA VERIFICAÇÃO COM 'SIM' OU 'NÃO'
-# APÓS CONFIRMAR, PASSA POR PARÂMETRO O NUMERO DA FRUTA SELECIONADA JUNTO COM O ARRAY PRA EXIBIR AS INFORMAÇÕES SOBRE A FRUTA
+#FUNÇÃO DE ESCOLHER AS FRUTAS, LEGUMES E VERDURAS DA REGIÃO ESCOLHIDA, PASSADA POR PARÂMETRO.
+# PEGA UMA VARIÁVEL, SELECIONA O ARRAY 'frutasRegioes[]', 'verdurasRegioes[]', 'legumesRegioes[]' PASSANDO O PARAMETRO DO NUMERO DA REGIÃO QUE USUARIO DIGITOU - 1, SELECIONANDO UMA frutaRegiao, OU verduraRegiao, OU legumeRegiao
+# DEPOIS PUXA A FUNÇÃO DE IMPRIMIR COM O FOR-EACH, PASSANDO O ARRAY DE FRUTAS, OU VERDURAS OU LEGUMES DA REGIÃO ESCOLHIDA
+# APÓS ISSO, TEM A VERIFICAÇÃO DE SELEÇÃO DA FRUTA, LEGUME OU VERDURA QUE O USUÁRIO SELECIONOU, PODENDO NÃO TER NO ARRAY, EXIBINDO UMA MENSAGEM DE ERRO E PEDINDO DENOVO PARA O USUÁRIO DIGITAR O NÚMERO, 
+# E, DEPOIS, UMA VERIFICAÇÃO COM 'SIM' OU 'NÃO'
+# APÓS CONFIRMAR, PASSA POR PARÂMETRO O NUMERO DA FRUTA, LEGUME OU VERDURA SELECIONADA JUNTO COM O ARRAY PRA EXIBIR AS INFORMAÇÕES SOBRE O ALIMENTO
 def frutasAEscolher(regiao):
     frutas = frutasRegioes[regiao-1]
     Imprimir(frutas) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
@@ -103,7 +98,7 @@ def frutasAEscolher(regiao):
 
 def verdurasAEscolher(regiao):
     verduras = verdurasRegioes[regiao-1]
-    Imprimir(verduras) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
+    Imprimir(verduras) #entra o Array, faz o forEach e exibe todos as VERDURAS enumeradas
     i = True
     while i:
         verduraSelecionada = inputMaster("\nEscolha o número da verdura: ", int, ValueError, "Digite um Numero!!")
@@ -117,7 +112,7 @@ def verdurasAEscolher(regiao):
 
 def legumesAEscolher(regiao):
     legumes = legumesRegioes[regiao-1]
-    Imprimir(legumes) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
+    Imprimir(legumes) #entra o Array, faz o forEach e exibe todos as LEGUMES enumeradas
     i = True
     while i:
         legumeSelecionada = inputMaster("\nEscolha o número da verdura: ", int, ValueError, "Digite um Numero!!")
@@ -129,7 +124,9 @@ def legumesAEscolher(regiao):
                 i = False
                 infoLegume(legumes[legumeSelecionada-1])
 
-#APÓS PEGAR A FRUTA PELO PARÂMETRO, ARMAZENA NUMA VARIAVEL, PEGANDO APENAS A POSIÇÃO DO NOME
+
+
+#APÓS PEGAR A FRUTA, VERDURA E LEGUME PELO PARÂMETRO, ELE ARMAZENA NUMA VARIAVEL, PEGANDO APENAS A POSIÇÃO DO NOME
 # ENTRA NUM WHILE PARA VERIFICAR A OPÇÃO DIGITADA, PODENDO SER INVÁLIDA E REQUISITANDO NOVAMENTE A SELEÇÃO DA INFORMAÇÃO
 def infoFruta(fruta):
     nomeFruta = fruta[0]
@@ -195,10 +192,11 @@ def infoLegume(legume):
             print("Opção Inválida!")
 
 
+
 #APÓS O USUÁRIO SELECIONAR A OPÇÃO DE TECNICAS SUSTENTÁVEIS, ELE PERGUNTA QUAL TÉCNICA ELE DESEJA APRENDER
 # FAZ UM FOR-EACH DAS TÉCNICAS, PUXANDO APENAS O INDEX DO NOME DAS TÉCNICAS, EXIBINDO AO USUÁRIO E REQUISITANDO O NUMERO DE ESCOLHA
 # SE ESCOLHER RECICLAGEM, FARÁ UM FOR-EACH NOVAMENTE EXIBINDO OS TIPO DE RECICLAGEM, SENDO PUXADO APENAS O INDEX DO NOME DO ARRAY DOS TIPOS DE RECICLAGEM
-# CASO ESCOLHER OUTRO TIPO DE TÉCNICA, EXIBIR O NOME E O CONTEÚDO DO TIPO DE TÉCNICA SUSTENTÁVEL
+# CASO ESCOLHER OUTRO TIPO DE TÉCNICA, EXIBIRÁ O NOME E O CONTEÚDO DO TIPO DE TÉCNICA SUSTENTÁVEL
 def tecnicasSustentaveis():
     tecnicas = [
                     ["Reciclagem",
@@ -209,11 +207,8 @@ def tecnicasSustentaveis():
                         ]
                     ],
                     ["Captação de Água da Chuva", "\n   [CAPTAÇÃO DE ÁGUA DA CHUVA \nA água é um recurso essencial para vida humana, isso é indiscutível, e já existem várias alternativas para suprir a carência de água de qualidade aqui no Brasil, como utilizar os rios e mananciais. E uma excelente alternativa para economizar água em casa e fácil de replicar, que permite o melhor aproveitamento desse recurso natural é a captação de água da chuva e utilizar para tarefas domésticas. \n\nExiste também sistemas de captação de água de chuva, como um tanque de água da chuva usado para coletar e armazenar o escoamento da água da chuva, e outros como uma Cisternas que normalmente é instalada em telhados por meio de tubos, são soluções alternativas eficientes usadas na hora de economizar água. \n\nVale a pena avaliar a possibilidade de instalar um sistema de coleta de água de chuva e/ou simplesmente considerar a possibilidade de armazenar a água de chuva para utilizá-la em tarefas domésticas e assim economizar nosso recurso natural mais importante que é Água. Se cada um contribuir um pouco, o planeta agradece!"],
-
                     ["Restos de alimentos para compostagem","\n   [RESTOS DE ALIMENTOS PARA COMPOSTAGEM]\n Existem várias possibilidades de reaproveitamento dos resíduos de alimentos, e a forma mais comum é através da compostagem doméstica, contribuindo para reduzir gases do efeito estufa e o lixo orgânico.\n\n  A compostagem é um processo de reciclagem do lixo orgânico, transforma a matéria orgânica encontrada no lixo em adubo natural, que pode ser usado na agricultura, em jardins e plantas, substituindo o uso de produtos químicos."],
-
                     ["Inseticida Natural", "\n   [INSETICIDA NATURAL]\n Como a sociedade já tem mais conhecimento da necessidade da sustentabilidade, e falamos no tópico acima sobre produzir alimentos orgânicos em casa, então com isso surge também a necessidade de alternativas para o controle biológico de pragas, insetos, pois o tradicional utiliza muita química e que prejudica as plantas e o solo. \n\nOs inseticidas naturais representam essa alternativa para produtores rurais que não querem utilizar agentes químicos em suas lavouras e até mesmo para pessoas comuns que estão em busca de uma solução útil contra a proliferação de insetos em suas residências. \n\nA sugestão é utilizar ingredientes naturais como alho, coentro, hortelã, tabaco, pimenta, essas são algumas opções de inseticidas naturais que podem ser usados para proteger plantações e combater pragas que atacam lavouras ou até mesmo hortas caseiras, contra larvas, borboletas, formigas, pulgões, lagartas, moscas, mosquitos entre outros, ok?"],
-
                     ["Horta Orgânica", "\n   [HORTA ORGÂNICA]\n Cultivar vegetais em casa, não é uma exclusividade de fazendas e chácaras, é possível ter uma horta orgânica até em espaços pequenos, além de promover o cultivo sem agredir o solo e o meio ambiente. \n\nPara hortas em ambientes internos e na utilização de vasos, potes, garrafas e outros recipientes, seja em hortas verticais ou horizontais, você não deve esquecer de providenciar furos no fundo para evitar o excesso de água no solo, isso pode contribuir para apodrecer as raízes. \n\nEntão a sugestão é se preocupar primeiro com solo que uma parte muito importante, ele precisa ser fofo e rico em nutrientes, isso deixará seus vegetais saudáveis e uma boa dica é utilizar adubos originados de itens naturais, como cascas e restos de vegetais."]
                 ]
     
@@ -232,6 +227,9 @@ def tecnicasSustentaveis():
         print(tecnicas[tecnica-1][1])
     
 
+
+# APÓS O USUÁRIO ESCOLHER A OPÇÃO DE ADUBAGEM NO MENU, ELE SERÁ DIRECIONADO PARA ESTA FUNÇÃO
+# AQUI ELE PODERÁ ESCOLHER ENTRE AS OPÇÕES DE ADUBAGEM E APÓS ESCOLHER, SERÁ MOSTRADO A DESCRIÇÃO DA ADUBAGEM
 def adubagem():
     adubagem = [
         ["O que é Adubagem? ", "Adubo, também conhecido como fertilizante, é um produto de origem orgânica ou sintética (mineral) usado para nutrir as plantas. O adubo é muito usado na agricultura e na jardinagem, pois possui grande quantidade de nutrientes e, portanto, pode deixar o solo fértil, aumentando a produção."],
@@ -274,46 +272,67 @@ def adubagem():
             ]
         ]
     ]
+    # EXISTE UM ARRAY 'adubagem' QUE POSSUI INFORMAÇÕES EM SEU INDEX, MAS TAMBEM EXISTEM OUTROS CONJUNTOS DE ARRAYS DENTRO DELE, QUE POSSUEM MAIS INFORMAÇÕES
     
     print(f"\n\n{adubagem[0][0].upper()}\n{adubagem[0][1]}")
-
+    # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
     while True:
         print("\n\nQual tipo de adubagem você deseja aprender?")
-        for i in range(0,len(adubagem[1])):
-            print(f"[{i+1}] - {adubagem[1][i][0]}")
+        Imprimir(adubagem[1])
         tipo = int(input("\n\nQual numero? -> "))
 
-        if tipo == 1 or tipo == 2 or tipo == 3:
+        if tipo <= len(adubagem[1]) and tipo > 0:
             print(f"\n\n[{adubagem[1][tipo-1][0].upper()}] \n{adubagem[1][tipo-1][1]}\n")
             break
-        elif tipo != 1 or tipo != 2:
+        else:
             print("\nOpção inválida!")
 
     while True:
-        for i in range(0, len(adubagem[1][tipo-1][2])):
-            print(f"[{i+1}] - {adubagem[1][tipo-1][2][i][0]}")
-        
-        tipo2 = int(input("\n\nQual numero? \n>"))
-        
-        if tipo == 3:
-            if tipo2 == 1 or tipo2 == 2 or tipo2 == 3 or tipo2 == 4 or tipo2 == 5 or tipo2 == 6 or tipo2 == 7 or tipo2 == 8 or tipo2 == 9 or tipo2 == 10 or tipo2 == 11 or tipo2 == 12:
-                print(f"\n\n[{adubagem[1][tipo-1][2][tipo2-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipo2-1][1]}\n")
-                break
-            else:
-                print("\nOpção inválida!")
-        
-        elif tipo2 == 1 or tipo2 == 2 or tipo2 == 3 or tipo2 == 4 or tipo2 == 5 or tipo2 == 6:
-            print(f"\n\n[{adubagem[1][tipo-1][2][tipo2-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipo2-1][1]}\n")
+        Imprimir(adubagem[1][tipo-1][2])
+        tipoAdubagemSelecionada = int(input("\n\nQual numero? \n> "))
+
+        if tipoAdubagemSelecionada > 0 and tipoAdubagemSelecionada <= len(adubagem[1][tipo-1][2]):
+            print(f"\n\n[{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][1]}\n")
             break
         else:
             print("\nOpção inválida!")
     
 
 
+# ARRAY COM AS INFORMAÇÕES SOBRE INSETICIDAS NATURAIS
+def inseticidaNatural():
+    inseticida = ["Inseticidas Naturais","Inseticidas naturais são produtos que não agridem o meio ambiente e são menos tóxicos para os seres humanos. Eles podem ser feitos com ingredientes que você tem em casa, como alho, cebola, pimenta, cravo, entre outros. Veja como fazer inseticidas naturais para combater pragas e insetos indesejados no seu jardim ou horta.", 
+                    [
+                        ["Chorume orgânico", "O chorume orgânico, diferentemente do chorume tóxico produzido em aterros, é um ótimo biofertilizante e, dependendo do uso, também pode ser um bom inseticida natural. O chorume orgânico é o líquido produzido pela decomposição dos alimentos por meio do processo de compostagem com minhocas.", "Se ele for diluído em dez partes de água e aplicado nas folhas (no período de sol baixo) e solo, fornecerá micronutrientes que auxiliarão o crescimento e defesa das plantas. Se cada parte de chorume for diluída numa parte de água na proporção meio a meio, a mistura terá potencial inseticida. Logo, poderá ser aplicada com um borrifador diretamente nas partes atingidas por pragas. A propriedade inseticida do chorume orgânico pode ser utilizada tanto como forma de combate quanto prevenção a pragas. Mas lembre-se de deixar para as horas de Sol baixo as aplicações. Isso devido à possibilidade de queimar as folhas do cultivo em horas de Sol intenso."],
+                        ["Sabão de coco", "O sabão de coco também pode ser um aliado do controle de pragas. Mas antes de utilizá-lo verifique se em sua composição foram utilizados apenas óleos vegetais e soda cáustica. Ela não é prejudicial à saúde depois que reage e se transforma em glicerina e sabão. Muitos sabões incluem óleos derivados do petróleo e outras substâncias prejudiciais, evite-os.", "Para utilizar o sabão de coco misture uma colher dele numa xícara de óleo de coco. Despeje essa mistura num borrifador contendo 500 ml de água e aplique diretamente sobre as plantas ou insetos indesejados. Mas cuidado, não confunda pragas com insetos polinizadores como abelhas, que são essenciais para o desenvolvimento das plantas. Lembre-se também que o sabão de coco está previsto na legislação como orgânico, entretanto não é um produto 100% natural."],
+                        ["Alho e cebola", "Alho (Allium sativum) e cebola (Allium cepa) também podem ser usados como inseticida natural.", "Para isso, deixe ferver cinco dentes de alho e metade de uma cebola em um litro de água por aproximadamente dez minutos. Após esfriar, coe e pulverize a mistura nas plantas afetadas durante o sol baixo."],
+                        ["Urtiga", "A urtiga é uma planta medicinal da espécie Urtica dioica, também conhecida como urtigão, ortiga ou urtiga-maior, rica em vitaminas A, C e K, polifenóis, flavonóides e minerais como cálcio, ferro e magnésio, com ação anti-inflamatória e antioxidante.", "Colha 200 gramas de urtiga e deixe descansando num recipiente com dez litros de água durante cinco dias. Após esse período, coe a mistura e pulverize o líquido diretamente nas plantas durante o sol baixo."],
+                        ["Folha de tomate", "O tomate é um fruto rico em vitamina C, vitamina A, vitamina K e licopeno. Se você já teve cultivos de tomate sabe que essas plantas nascem muito facilmente e têm um ciclo de vida bem curto. Após a primeira leva de tomates, elas acabam morrendo naturalmente. Uma forma de aproveitar suas folhas antes de morrerem é fazer inseticida natural.", "Para isso, preencha dois copos com folhas de tomate picadas e adicione água. Deixe essa mistura descansar por uma noite, acrescente mais dois copos d’água e pulverize nas plantas durante o sol baixo."],
+                        ["Pimenta", "A pimenta não faz mal às plantas e funciona como um ótimo inseticida natural contra pragas.", "Para isso, bata no liquidificador cinco a dez pimentas com dois copos de água e deixe a mistura descansando durante uma noite. Pronto! Já pode borrifar nas plantas. Mas cuidado com os olhos e lave bem as mãos após o uso."],
+                        ["Vinagre", "O vinagre é um ótimo fungicida, que pode ajudá-lo a proteger suas plantas de alguns tipos de fungos e mofo.", "Misture uma medida de vinagre para três partes de água e algumas gotas de detergente neutro em um borrifador. Esse spray é recomendado para infestações de pulgões, lagartas e percevejos. Faça isso no final da tarde para não correr o risco de queimar suas plantas. Ao utilizar essas técnicas fáceis para se livrar de pragas, certifique-se de não estar eliminando plantas ou bichinhos benéficos para a horta orgânica."]
+                    ]
+                ]
+    #ARRAY CONTENDO 'INSETICIDAS NATURAIS', 'O QUE É INSETICIDA NATURAL' E UM ARRAY CONTENDO O TIPOS DE INSETICIDAS NATURAIS
+
+    print(f"\n\n[{inseticida[0].upper()}] \n{inseticida[1]}\n")
+    print("Existem vários tipos de inseticidas naturais, veja alguns exemplos: \n")
+    Imprimir(inseticida[2]) #array de ForEach, passando parâmetro 3ª posição do array inseticida
+        
+    while True:
+        tipo = int(input("\nQual inseticida natural você deseja saber mais? \n> "))
+        if tipo > 0 and tipo <= len(inseticida[2]):
+            print(f"\n\n{inseticida[2][tipo-1][0].upper()} \n{inseticida[2][tipo-1][1]} \n\nMODO DE USO: {inseticida[2][tipo-1][2]}")
+            break
+        else:
+            print("Opção Inválida!")
+
+
+
+
 #COMEÇO DO CHATBOT   #COMEÇO DO CHATBOT   #COMEÇO DO CHATBOT
 print("\nBem vindo ao CHATBOT AgroVida!")
 
-# EXIBE AS OPÇÕES DE ESCOLHA DO USUÁRIO, COM UM LOOP, PARA PODER REFAZER O PROCESSO DE CONSULTA DE INFORMAÇÕES DO NOSSO CHATBOT
+# EXIBE O MENU DE OPÇÕES PARA O USUÁRIO ESCOLHER O QUE DESEJA SABER SOBRE A AGRICULTURA SUSTENTÁVEL
 loop = True
 while(loop):
     opcao = int(input("\nEm que posso te ajudar?" + 
@@ -322,6 +341,7 @@ while(loop):
                         "\n[3] - Informações sobre Legumes" +
                         "\n[4] - Técnicas de Sustentabilidade de Plantio" + 
                         "\n[5] - Informações sobre Adubagem de Solo" +
+                        "\n[6] - Informações sobre Inseticidas Naturais" +
                         "\n\nQual número > "))
     match opcao:
         case 1:
@@ -334,7 +354,11 @@ while(loop):
             tecnicasSustentaveis()
         case 5:
             adubagem()
+        case 6:
+            inseticidaNatural()
 
+
+    # PERGUNTA SE O USUÁRIO DESEJA CONTINUAR COM O PROGRAMA OU ENCERRAR
     continuar = input("\n\n\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")
     if(continuar.lower() == "s"):
         loop = True

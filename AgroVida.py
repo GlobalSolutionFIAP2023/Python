@@ -28,6 +28,7 @@ frutasRegioes = [frutasNorte, frutasNordeste, frutasCentroOeste, frutasSudeste, 
 verdurasRegioes = [verdurasNorte, verdurasNordeste, verdurasCentroOeste, verdurasSudeste, verdurasSul]
 legumesRegioes = [legumesNorte, legumesNordeste, legumesCentroOeste, legumesSudeste, legumesSul]
 
+alimentosRegioes = [frutasRegioes, verdurasRegioes, legumesRegioes]
 
 #FUNÇÃO DE INPUT, QUE TRATA ERROS COM TRY-CATCH, PASSANDO COMO PARÂMETRO (MENSAGEM EXIBIDA NORMALMENTE, TIPO DE VARIÁVEL, MENSAGEM DE POSSÍVEL ERRO E MENSAGEM DE ERRO DEFAULT)
 def inputMaster(mensagem,type,possibleExecpt,execpMensage):
@@ -45,19 +46,19 @@ def inputMaster(mensagem,type,possibleExecpt,execpMensage):
 #FUNÇÃO COM FOR-EACH, PEGANDO O PARÂMETRO DE ARRAY DE UM ALIMENTO DE DETERMINADA REGIÃO E IMPRIMINDO NA TELA, LINHA POR LINHA, ENUMERADAS
 def Imprimir(objArray):
     for i in range(0, len(objArray)):
-        print(f" {i+1}º - " + objArray[i][0])
+        print(f" {i+1} - " + objArray[i][0])
 
 
 #FUNÇÃO QUE IMPRIME AS REGIÕES DO ARRAY DE 'REGIÕES' E REQUERE AO USUÁRIO, ATRAVÉS DO INPUT-MASTER, O NUMERO DE UMA REGIÃO QUE DESEJA CONSULTAR AS FRUTAS, LEGUMES E VERDURAS
-# A PARTIR DO NÚMERO DO USUÁRIO, ELE ESCOLHE NO ARRAY DE 'CLIMAS', PEGANDO O CLIMA DE DETERMINADA REGIÃO E EXIBINDO NA TELA
-# APÓS ISSO, ELE JOGA O PARÂMETRO 'REGIÃO' NA FUNÇÃO frutasAEscolher(), CASO FOR FRUTAS, OU legumesAEscolher(), CASO FOR LEGUMES, OU verdurasAEscolher(), CASO FOR VERDURAS
+#   A PARTIR DO NÚMERO DO USUÁRIO, ELE ESCOLHE NO ARRAY DE 'CLIMAS', PEGANDO O CLIMA DE DETERMINADA REGIÃO E EXIBINDO NA TELA
+#   APÓS ISSO, ELE JOGA O PARÂMETRO 'REGIÃO' NA FUNÇÃO  alimentoAEscolher() PARA QUE O USUÁRIO ESCOLHA UM ALIMENTO DE DETERMINADA REGIÃO
 def regiao(parametro):
     for i in range(0,len(regioes)):
         print(f"[{i+1}] - {regioes[i]}")
     
     regiao = inputMaster("\nDigite o número da região em que deseja: ", int, ValueError, "Digite um Numero!!\n")
 
-    climas = ["A região Norte, apresenta clima:\n\n  EQUATORIAL ÚMIDO –> marcado por elevadas temperaturas – e tropical continental, que resulta em duas estações bem definidas (chuvosa e seca).", "A região Nordeste, apresenta clima:\n\n  TROPICAL ÚMIDO ->  Verão quente e úmido, com temperaturas elevadas o ano todo, que variam entre 25 e 31 graus.", "A região Centro-Oeste, apresenta clima:\n\n   TROPICAL SEMIÚMIDO ->  Duas estações bem definidas – um inverno seco e um verão muito quente e chuvoso. As temperaturas variam bastante: cerca de 40 °C nos meses mais quentes e 15 °C nos meses mais frios.", "A região Sudeste, apresenta clima:\n\n   TROPICAL  ->  Temperaturas altas e duas estações bem marcadas: o verão chuvoso, e o inverno seco.", "A região Sul, apresenta clima:\n\n   SUBTROPICAL  ->  Estações do ano bem diferenciadas, com grandes variações de temperatura. É a região mais fria do País, onde, durante o inverno, ocorrem geadas e até neve em alguns lugares."]
+    climas = ["\n\nA região Norte, apresenta clima:\n\n  EQUATORIAL ÚMIDO –> marcado por elevadas temperaturas – e tropical continental, que resulta em duas estações bem definidas (chuvosa e seca).\n", "\n\nA região Nordeste, apresenta clima:\n\n  TROPICAL ÚMIDO ->  Verão quente e úmido, com temperaturas elevadas o ano todo, que variam entre 25 e 31 graus.\n", "\n\nA região Centro-Oeste, apresenta clima:\n\n   TROPICAL SEMIÚMIDO ->  Duas estações bem definidas – um inverno seco e um verão muito quente e chuvoso. As temperaturas variam bastante: cerca de 40 °C nos meses mais quentes e 15 °C nos meses mais frios.\n", "\n\nA região Sudeste, apresenta clima:\n\n   TROPICAL  ->  Temperaturas altas e duas estações bem marcadas: o verão chuvoso, e o inverno seco.\n", "\n\nA região Sul, apresenta clima:\n\n   SUBTROPICAL  ->  Estações do ano bem diferenciadas, com grandes variações de temperatura. É a região mais fria do País, onde, durante o inverno, ocorrem geadas e até neve em alguns lugares.\n"]
     
     try:
         print(climas[regiao-1])
@@ -68,128 +69,51 @@ def regiao(parametro):
         print(e)
     else:
         if(parametro == "fruta"):
-            frutasAEscolher(regiao)
+            alimentoAEscolher(regiao, 0)
         elif(parametro == "verdura"):
-            verdurasAEscolher(regiao)
+            alimentoAEscolher(regiao, 1)
         elif(parametro == "legume"):
-            legumesAEscolher(regiao)
+            alimentoAEscolher(regiao, 2)
 
 
 
 #FUNÇÃO DE ESCOLHER AS FRUTAS, LEGUMES E VERDURAS DA REGIÃO ESCOLHIDA, PASSADA POR PARÂMETRO.
-# PEGA UMA VARIÁVEL, SELECIONA O ARRAY 'frutasRegioes[]', 'verdurasRegioes[]', 'legumesRegioes[]' PASSANDO O PARAMETRO DO NUMERO DA REGIÃO QUE USUARIO DIGITOU - 1, SELECIONANDO UMA frutaRegiao, OU verduraRegiao, OU legumeRegiao
-# DEPOIS PUXA A FUNÇÃO DE IMPRIMIR COM O FOR-EACH, PASSANDO O ARRAY DE FRUTAS, OU VERDURAS OU LEGUMES DA REGIÃO ESCOLHIDA
-# APÓS ISSO, TEM A VERIFICAÇÃO DE SELEÇÃO DA FRUTA, LEGUME OU VERDURA QUE O USUÁRIO SELECIONOU, PODENDO NÃO TER NO ARRAY, EXIBINDO UMA MENSAGEM DE ERRO E PEDINDO DENOVO PARA O USUÁRIO DIGITAR O NÚMERO, 
-# E, DEPOIS, UMA VERIFICAÇÃO COM 'SIM' OU 'NÃO'
-# APÓS CONFIRMAR, PASSA POR PARÂMETRO O NUMERO DA FRUTA, LEGUME OU VERDURA SELECIONADA JUNTO COM O ARRAY PRA EXIBIR AS INFORMAÇÕES SOBRE O ALIMENTO
-def frutasAEscolher(regiao):
-    frutas = frutasRegioes[regiao-1]
-    Imprimir(frutas) #entra o Array, faz o forEach e exibe todos as frutas enumeradas
-    i = True
-    while i:
-        frutaSelecionada = inputMaster("\nEscolha o número da fruta: ", int, ValueError, "Digite um Numero!!")
-        if(frutaSelecionada > len(frutas) or frutaSelecionada < 1):
-            print("Número Inválido!")
+#   ATRIBUI NA VARIAVEL "alimentos", O ARRAY DE FRUTAS, VERDURAS OU LEGUMES DA REGIÃO ESCOLHIDA
+#   DEPOIS PUXA A FUNÇÃO DE IMPRIMIR COM O FOR-EACH, PASSANDO O ARRAY DE FRUTAS, OU VERDURAS OU LEGUMES DA REGIÃO ESCOLHIDA
+#   APÓS ISSO, TEM A VERIFICAÇÃO DE SELEÇÃO DA FRUTA, LEGUME OU VERDURA QUE O USUÁRIO SELECIONOU, PODENDO NÃO TER NO ARRAY, EXIBINDO UMA MENSAGEM DE ERRO E PEDINDO DENOVO PARA O USUÁRIO DIGITAR O NÚMERO, 
+#   E, DEPOIS, UMA VERIFICAÇÃO COM 'SIM' OU 'NÃO'
+#   APÓS CONFIRMAR, PASSA POR PARÂMETRO O NUMERO DA FRUTA, LEGUME OU VERDURA SELECIONADA JUNTO COM O ARRAY PRA EXIBIR AS INFORMAÇÕES SOBRE O ALIMENTO
+def alimentoAEscolher(regiao, tipoAlimento):
+    alimentos = alimentosRegioes[tipoAlimento][regiao-1]
+    Imprimir(alimentos) #entra o Array, faz o forEach e exibe todos os alimentos enumerados
+
+    alimentoSelecionado = inputMaster("\nEscolha o número do alimento: ", int, ValueError, "Digite um Numero!!")
+    if(alimentoSelecionado > len(alimentos) or alimentoSelecionado < 1):
+        print("Número Inválido!")
+        alimentoAEscolher(regiao, tipoAlimento)
+    else:
+        confirmacao = input(f"Deseja saber saber as informações sobre {alimentos[alimentoSelecionado-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
+        if confirmacao.lower() == "s":
+            informacoes(alimentos[alimentoSelecionado-1])
         else:
-            confirmacao = input(f"Deseja saber saber as informações sobre {frutas[frutaSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
-            if confirmacao.lower() == "s":
-                i = False
-                infoFruta(frutas[frutaSelecionada-1])
-
-def verdurasAEscolher(regiao):
-    verduras = verdurasRegioes[regiao-1]
-    Imprimir(verduras) #entra o Array, faz o forEach e exibe todos as VERDURAS enumeradas
-    i = True
-    while i:
-        verduraSelecionada = inputMaster("\nEscolha o número da verdura: ", int, ValueError, "Digite um Numero!!")
-        if(verduraSelecionada > len(verduras) or verduraSelecionada < 1):
-            print("Número Inválido!")
-        else:
-            confirmacao = input(f"Deseja saber saber as informações sobre {verduras[verduraSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
-            if confirmacao.lower() == "s":
-                i = False
-                infoVerdura(verduras[verduraSelecionada-1])
-
-def legumesAEscolher(regiao):
-    legumes = legumesRegioes[regiao-1]
-    Imprimir(legumes) #entra o Array, faz o forEach e exibe todos as LEGUMES enumeradas
-    i = True
-    while i:
-        legumeSelecionada = inputMaster("\nEscolha o número da verdura: ", int, ValueError, "Digite um Numero!!")
-        if(legumeSelecionada > len(legumes) or legumeSelecionada < 1):
-            print("Número Inválido!")
-        else:
-            confirmacao = input(f"Deseja saber saber as informações sobre {legumes[legumeSelecionada-1][0]}?\n[S] - Sim\n[N] - Não \n> ")
-            if confirmacao.lower() == "s":
-                i = False
-                infoLegume(legumes[legumeSelecionada-1])
+            alimentoAEscolher(regiao, tipoAlimento)
 
 
 
-#APÓS PEGAR A FRUTA, VERDURA E LEGUME PELO PARÂMETRO, ELE ARMAZENA NUMA VARIAVEL, PEGANDO APENAS A POSIÇÃO DO NOME
-# ENTRA NUM WHILE PARA VERIFICAR A OPÇÃO DIGITADA, PODENDO SER INVÁLIDA E REQUISITANDO NOVAMENTE A SELEÇÃO DA INFORMAÇÃO
-def infoFruta(fruta):
-    nomeFruta = fruta[0]
-    condicao = True
-    while condicao:
-        opcao = int(input(f"\n[1] - Tempo para Colheita do fruto {nomeFruta}" +
-                        f"\n[2] - Qual altura a/o {nomeFruta} pode alcançar" +
-                        f"\n[3] - Qual tipo de solo é melhor para plantar a/o {nomeFruta}"+
-                        "\nQual número? => "))
-        if opcao == 1:
-            print(f"\nO tempo médio para o(a) {nomeFruta} dar fruto é de {fruta[1]} meses")
-            condicao = False
-        elif opcao == 2:
-            print(f"\nO tamanho médio do(a) {nomeFruta} é entre {fruta[2]} metros aproximadamente")
-            condicao = False
-        elif opcao == 3:
-            print(f"\nO tipo de solo mais adequado para o(a) {nomeFruta} é o {fruta[3]}")
-            condicao = False
-        elif opcao < 1 or opcao > 3:
-            condicao = True
-            print("Opção Inválida!")
-            
-def infoVerdura(verdura):
-    nomeVerdura = verdura[0]
-    condicao = True
-    while condicao:
-        opcao = int(input(f"\n[1] - Tempo para Colheita do(a) {nomeVerdura}" +
-                        f"\n[2] - Qual altura a(o) {nomeVerdura} pode alcançar" +
-                        f"\n[3] - Qual tipo de solo é melhor para plantar a(o) {nomeVerdura}"+
-                        "\nQual número? => "))
-        if opcao == 1:
-            print(f"\nO tempo médio para o(a) {nomeVerdura} ser colhido é de {verdura[1]} meses")
-            condicao = False
-        elif opcao == 2:
-            print(f"\nO tamanho médio do(a) {nomeVerdura} é entre {verdura[2]} metros aproximadamente")
-            condicao = False
-        elif opcao == 3:
-            print(f"\nO tipo de solo mais adequado para o(a) {nomeVerdura} é o {verdura[3]}")
-            condicao = False
-        elif opcao < 1 or opcao > 3:
-            condicao = True
-            print("Opção Inválida!")
+#APÓS PEGAR O ARRAY DA FRUTA, DA VERDURA E DO LEGUME PELO PARÂMETRO, ELE ENTRA NO WHILE E EXIBE AS INFORMAÇÕES SOBRE A FRUTA, VERDURA OU LEGUME SELECIONADO
+# PEGANDO DO ARRAY "RESPOSTAS", APOS O USUÁRIO DIGITAR O NUMERO DA OPÇÃO, ELE EXIBE A INFORMAÇÃO SOBRE A FRUTA, VERDURA OU LEGUME SELECIONADO
+def informacoes(array):
+    respostas = ["Tamanho Médio da(o) ", "Tempo Médio para Colheita da(o) ", "Tipo de Solo Ideal da(o) "]
+    print("\n\nQual informação você deseja saber? \n> ")
+    for i in range(len(respostas)):
+        print(f"[{i+1}] - {respostas[i]}{array[0]}") 
 
-def infoLegume(legume):
-    nomeLegume = legume[0]
-    condicao = True
-    while condicao:
-        opcao = int(input(f"\n[1] - Tempo para Colheita do(a) {nomeLegume}" +
-                        f"\n[2] - Qual altura a(o) {nomeLegume} pode alcançar" +
-                        f"\n[3] - Qual tipo de solo é melhor para plantar a(o) {nomeLegume}"+
-                        "\nQual número? => "))
-        if opcao == 1:
-            print(f"\nO tempo médio para o(a) {nomeLegume} ser colhido é de {legume[1]} meses")
-            condicao = False
-        elif opcao == 2:
-            print(f"\nO tamanho médio do(a) {nomeLegume} é entre {legume[2]} metros aproximadamente")
-            condicao = False
-        elif opcao == 3:
-            print(f"\nO tipo de solo mais adequado para o(a) {nomeLegume} é o {legume[3]}")
-            condicao = False
-        elif opcao < 1 or opcao > 3:
-            condicao = True
-            print("Opção Inválida!")
+    opcao = inputMaster("\n> ", int, ValueError, "Digite um Numero!!") 
+    if opcao > 0 and opcao <= len(respostas):
+        print(f"\n{respostas[opcao-1].upper()}{array[0].upper()} => {array[opcao].upper()}")
+    else:
+        print("\nOpção Inválida!\n")
+        informacoes(array)
 
 
 
@@ -206,25 +130,23 @@ def tecnicasSustentaveis():
                             ["Embalagens Recicláveis","[EMBALAGENS RECICLÁVEIS] => Opte por usar embalagens recicláveis, que possam ser reutilizadas, após serem lavadas."]
                         ]
                     ],
-                    ["Captação de Água da Chuva", "\n   [CAPTAÇÃO DE ÁGUA DA CHUVA \nA água é um recurso essencial para vida humana, isso é indiscutível, e já existem várias alternativas para suprir a carência de água de qualidade aqui no Brasil, como utilizar os rios e mananciais. E uma excelente alternativa para economizar água em casa e fácil de replicar, que permite o melhor aproveitamento desse recurso natural é a captação de água da chuva e utilizar para tarefas domésticas. \n\nExiste também sistemas de captação de água de chuva, como um tanque de água da chuva usado para coletar e armazenar o escoamento da água da chuva, e outros como uma Cisternas que normalmente é instalada em telhados por meio de tubos, são soluções alternativas eficientes usadas na hora de economizar água. \n\nVale a pena avaliar a possibilidade de instalar um sistema de coleta de água de chuva e/ou simplesmente considerar a possibilidade de armazenar a água de chuva para utilizá-la em tarefas domésticas e assim economizar nosso recurso natural mais importante que é Água. Se cada um contribuir um pouco, o planeta agradece!"],
-                    ["Restos de alimentos para compostagem","\n   [RESTOS DE ALIMENTOS PARA COMPOSTAGEM]\n Existem várias possibilidades de reaproveitamento dos resíduos de alimentos, e a forma mais comum é através da compostagem doméstica, contribuindo para reduzir gases do efeito estufa e o lixo orgânico.\n\n  A compostagem é um processo de reciclagem do lixo orgânico, transforma a matéria orgânica encontrada no lixo em adubo natural, que pode ser usado na agricultura, em jardins e plantas, substituindo o uso de produtos químicos."],
-                    ["Inseticida Natural", "\n   [INSETICIDA NATURAL]\n Como a sociedade já tem mais conhecimento da necessidade da sustentabilidade, e falamos no tópico acima sobre produzir alimentos orgânicos em casa, então com isso surge também a necessidade de alternativas para o controle biológico de pragas, insetos, pois o tradicional utiliza muita química e que prejudica as plantas e o solo. \n\nOs inseticidas naturais representam essa alternativa para produtores rurais que não querem utilizar agentes químicos em suas lavouras e até mesmo para pessoas comuns que estão em busca de uma solução útil contra a proliferação de insetos em suas residências. \n\nA sugestão é utilizar ingredientes naturais como alho, coentro, hortelã, tabaco, pimenta, essas são algumas opções de inseticidas naturais que podem ser usados para proteger plantações e combater pragas que atacam lavouras ou até mesmo hortas caseiras, contra larvas, borboletas, formigas, pulgões, lagartas, moscas, mosquitos entre outros, ok?"],
-                    ["Horta Orgânica", "\n   [HORTA ORGÂNICA]\n Cultivar vegetais em casa, não é uma exclusividade de fazendas e chácaras, é possível ter uma horta orgânica até em espaços pequenos, além de promover o cultivo sem agredir o solo e o meio ambiente. \n\nPara hortas em ambientes internos e na utilização de vasos, potes, garrafas e outros recipientes, seja em hortas verticais ou horizontais, você não deve esquecer de providenciar furos no fundo para evitar o excesso de água no solo, isso pode contribuir para apodrecer as raízes. \n\nEntão a sugestão é se preocupar primeiro com solo que uma parte muito importante, ele precisa ser fofo e rico em nutrientes, isso deixará seus vegetais saudáveis e uma boa dica é utilizar adubos originados de itens naturais, como cascas e restos de vegetais."]
+                    ["Captação de Água da Chuva", "\n\nA água é um recurso essencial para vida humana, isso é indiscutível, e já existem várias alternativas para suprir a carência de água de qualidade aqui no Brasil, como utilizar os rios e mananciais. E uma excelente alternativa para economizar água em casa e fácil de replicar, que permite o melhor aproveitamento desse recurso natural é a captação de água da chuva e utilizar para tarefas domésticas. \n\nExiste também sistemas de captação de água de chuva, como um tanque de água da chuva usado para coletar e armazenar o escoamento da água da chuva, e outros como uma Cisternas que normalmente é instalada em telhados por meio de tubos, são soluções alternativas eficientes usadas na hora de economizar água. \n\nVale a pena avaliar a possibilidade de instalar um sistema de coleta de água de chuva e/ou simplesmente considerar a possibilidade de armazenar a água de chuva para utilizá-la em tarefas domésticas e assim economizar nosso recurso natural mais importante que é Água. Se cada um contribuir um pouco, o planeta agradece!"],
+                    ["Restos de alimentos para compostagem","\n\n Existem várias possibilidades de reaproveitamento dos resíduos de alimentos, e a forma mais comum é através da compostagem doméstica, contribuindo para reduzir gases do efeito estufa e o lixo orgânico.\n\n  A compostagem é um processo de reciclagem do lixo orgânico, transforma a matéria orgânica encontrada no lixo em adubo natural, que pode ser usado na agricultura, em jardins e plantas, substituindo o uso de produtos químicos."],
+                    ["Inseticida Natural", "\n\n Como a sociedade já tem mais conhecimento da necessidade da sustentabilidade, e falamos no tópico acima sobre produzir alimentos orgânicos em casa, então com isso surge também a necessidade de alternativas para o controle biológico de pragas, insetos, pois o tradicional utiliza muita química e que prejudica as plantas e o solo. \n\nOs inseticidas naturais representam essa alternativa para produtores rurais que não querem utilizar agentes químicos em suas lavouras e até mesmo para pessoas comuns que estão em busca de uma solução útil contra a proliferação de insetos em suas residências. \n\nA sugestão é utilizar ingredientes naturais como alho, coentro, hortelã, tabaco, pimenta, essas são algumas opções de inseticidas naturais que podem ser usados para proteger plantações e combater pragas que atacam lavouras ou até mesmo hortas caseiras, contra larvas, borboletas, formigas, pulgões, lagartas, moscas, mosquitos entre outros, ok?"],
+                    ["Horta Orgânica", "\n\n Cultivar vegetais em casa, não é uma exclusividade de fazendas e chácaras, é possível ter uma horta orgânica até em espaços pequenos, além de promover o cultivo sem agredir o solo e o meio ambiente. \n\nPara hortas em ambientes internos e na utilização de vasos, potes, garrafas e outros recipientes, seja em hortas verticais ou horizontais, você não deve esquecer de providenciar furos no fundo para evitar o excesso de água no solo, isso pode contribuir para apodrecer as raízes. \n\nEntão a sugestão é se preocupar primeiro com solo que uma parte muito importante, ele precisa ser fofo e rico em nutrientes, isso deixará seus vegetais saudáveis e uma boa dica é utilizar adubos originados de itens naturais, como cascas e restos de vegetais."]
                 ]
     
-    print("\n\n\nQual técnica você deseja aprender?")
-    for i in range(0,len(tecnicas)):
-        print(f"[{i+1}] - {tecnicas[i][0]}")
+    print("\n\n\nQual técnica você deseja aprender?\n")
+    Imprimir(tecnicas)
     tecnica = int(input("\n\nQual numero? -> "))
 
-    if tecnica == 1:
-        for i in range(0, len(tecnicas[0][1])):
+    if tecnica == 1: # SE O USUÁRIO ESCOLHER A OPÇÃO 1, ELE SERÁ DIRECIONADO PARA ESTA FUNÇÃO
+        for i in range(0, len(tecnicas[0][1])): # AQUI SERÁ IMPRESSO TODAS AS OPÇÕES DE ADUBAGEM
             print(f"[{i+1}] - {tecnicas[0][1][i][0]}")
-            
-        escolha = int(input("Qual numero?\n> "))
+        escolha = int(input("Qual numero?\n> ")) # APÓS O USUÁRIO ESCOLHER A OPÇÃO DE ADUBAGEM, IRA EXIBIR O NOME E A DESCRIÇÃO DA TECNICA SUSTENTAVEL
         print(tecnicas[0][1][escolha-1][1])
     else:
-        print(tecnicas[tecnica-1][1])
+        print(tecnicas[tecnica-1][1]) # CASO A ESCOLHA DO USUARIO FOR != 1, IRA EXIBIR O NOME E A DESCRIÇÃO DA TECNICA SUSTENTAVEL
     
 
 
@@ -242,16 +164,6 @@ def adubagem():
                     ["Torta de Mamona", "Rica em Nitrogênio(N) e Potássio(K), a torta de mamona é um excelente fertilizante orgânico, que pode ser utilizado em todas as culturas. É um produto de ação rápida, que favorece o desenvolvimento das plantas e aumenta a produção de flores e frutos."],
                     ["Húmus de Minhoca", "Obtido pela compostagem dos elementos organo-vegetais. Trata-se de fertilizante bem equilibrado em todos elementos nobres, proporcionando considerável aumento da fertilidade do solo e beneficiando as plantas em praticamente todas suas necessidades."],
                     ["Esterco","Os mais utilizados são os de gado e de frango. O esterco de gado contém maior quantidade de fibras, o que evita a compactação do solo e ajuda a reter maior quantidade de água. O de frango, por sua vez, é mais concentrado, extremamente rico em nutrientes. Porém, a grande quantidade de alguns elementos aumenta o risco de tornar o solo mais ácido e salino. O esterco só poderá ser utilizado no solo após estar perfeitamente curtido, pois do contrário, passará pelo processo de decomposição através de fermentação, o que poderá acarretar a queima das raízes das plantas. Esses adubos, além de curtidos deverão ser peneirados, para evitar blocos aglomerados que servem para desenvolver vários tipos de fungos prejudiciais as plantas."]
-                ]
-            ],
-            ["Adubo Mineral", "São originados de minérios e também são conhecidos como sintéticos, pois passam por um processo industrial para extrair os nutrientes de impurezas. \n\nAs vantagens desses tipos de fertilizantes na adubação do solo são a rápida absorção pelas plantas e uma concentração maior de nutrientes. Também é mais fácil para o produtor calcular a quantidade certa de nutrientes que cada medida contém, pois isso já vem especificado no rótulo do produto.",
-                [
-                    ["Salitre do Chile", "Fertilizante facilmente solúvel em água, apresenta-se na forma de minúsculas contas brancas. Contém 16% de teor de Nitrogênio(N) e causa reação alcalinizante no solo, servindo portanto para auxiliar na correção da acidez. Deve ser aplicado no solo sob ação de irrigação ou chuva fina, para evitar que possa causar queimaduras nas folhagens das plantas."],
-                    ["Sulfato de Amônio", "Seu teor de Nitrogênio(N), situa-se em torno de 20%. Diferente do produto anterior, sua ação no solo e acidificante. Trata-se de elemento que precisa passar no solo pela ação de bactérias húmicas, transformando-se em nitrato, para depois ser apropriado pelas plantas."],
-                    ["Salitre Potássico", "Elemento em dupla ação fertilizante pois, além de conter 15% de Potássio(K), contem ainda 15% de Nitrogênio(N), fortalecendo os tecidos foliares e a brotação das plantas, aumentando sua resistência a seca."],
-                    ["Superfosfato", "Trata-se de fertilizante fosforado e contem 18% de Fósforo(P). Não deve ser aplicado em solo que tenham recebido correção por calcário a menos de 6 meses. E elemento essencial para as espécies floríferas e/ou produtoras de frutos."],
-                    ["Cloreto de Potássio", "Elemento composto por cerca de 50% de Potássio(K) e trata-se de sal altamente hidroscópico – atrai as partículas de água em suspensão no ar – por isso deverá ser mantido em recipiente hermeticamente fechado para evitar liquefação."],
-                    ["Sulfato de Potássio", "Elemento dos mais equilibrados em Potássio(K) e que devido a sua ação alcalinizante, serve para a correção da acidez do solo."]
                 ]
             ],
             ["Adubo Caseiro", "Na internet é possível encontrar uma série de receitas utilizando restos de alimentos, casca de vegetais e casca de ovos. No entanto, o uso exclusivo de um ou outro material nem sempre oferece uma boa resposta, a recomendação é utilizar os resíduos em conjunto nas plantas, juntando uma série de nutrientes, melhorando a qualidade do solo e, consequentemente, o desenvolvimento das plantas.",
@@ -277,25 +189,24 @@ def adubagem():
     print(f"\n\n{adubagem[0][0].upper()}\n{adubagem[0][1]}")
     # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
     while True:
-        print("\n\nQual tipo de adubagem você deseja aprender?")
-        Imprimir(adubagem[1])
-        tipo = int(input("\n\nQual numero? -> "))
+        print("\n\nQual tipo de adubagem você deseja aprender?") # PERGUNTA QUAL TIPO DE ADUBO O USUARIO DESEJA APRENDER
+        Imprimir(adubagem[1]) # IMPRIME OS TIPOS DE ADUBO DISPONIVEIS
+        tipo = int(input("\n\nQual numero? -> ")) # PERGUNTA QUAL TIPO DE ADUBO O USUARIO DESEJA APRENDER
 
-        if tipo <= len(adubagem[1]) and tipo > 0:
-            print(f"\n\n[{adubagem[1][tipo-1][0].upper()}] \n{adubagem[1][tipo-1][1]}\n")
+        if tipo <= len(adubagem[1]) and tipo > 0: # VERIFICA SE O NUMERO DIGITADO É VALIDO
+            print(f"\n\n[{adubagem[1][tipo-1][0].upper()}] \n{adubagem[1][tipo-1][1]}\n")   # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
+            while True: 
+                Imprimir(adubagem[1][tipo-1][2])  # IMPRIME OS TIPOS DO ADUBO SELECIONADO
+                tipoAdubagemSelecionada = int(input("\n\nQual numero? \n> ")) # PERGUNTA QUAL TIPO DE ADUBO SELECIONADO, O USUARIO DESEJA APRENDER
+
+                if tipoAdubagemSelecionada > 0 and tipoAdubagemSelecionada <= len(adubagem[1][tipo-1][2]): # VERIFICA SE O NUMERO DIGITADO É VALIDO
+                    print(f"\n\n[{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][1]}\n") # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
+                    break
+                else:
+                    print("\nOpção inválida!\n")
             break
         else:
-            print("\nOpção inválida!")
-
-    while True:
-        Imprimir(adubagem[1][tipo-1][2])
-        tipoAdubagemSelecionada = int(input("\n\nQual numero? \n> "))
-
-        if tipoAdubagemSelecionada > 0 and tipoAdubagemSelecionada <= len(adubagem[1][tipo-1][2]):
-            print(f"\n\n[{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][1]}\n")
-            break
-        else:
-            print("\nOpção inválida!")
+            print("\nOpção inválida!\n")
     
 
 
@@ -322,6 +233,7 @@ def inseticidaNatural():
         tipo = int(input("\nQual inseticida natural você deseja saber mais? \n> "))
         if tipo > 0 and tipo <= len(inseticida[2]):
             print(f"\n\n{inseticida[2][tipo-1][0].upper()} \n{inseticida[2][tipo-1][1]} \n\nMODO DE USO: {inseticida[2][tipo-1][2]}")
+            # 3 index do array INSETICIDA, pegando a posição do TIPO DE INSETICIDA escolhido pelo usuário, e imprimindo as informações em UPPER(), depois fazendo o mesmo caminho, só que agora acessando o modo de uso do inseticida escolhido
             break
         else:
             print("Opção Inválida!")
@@ -333,35 +245,31 @@ def inseticidaNatural():
 print("\nBem vindo ao CHATBOT AgroVida!")
 
 # EXIBE O MENU DE OPÇÕES PARA O USUÁRIO ESCOLHER O QUE DESEJA SABER SOBRE A AGRICULTURA SUSTENTÁVEL
-loop = True
-while(loop):
-    opcao = int(input("\nEm que posso te ajudar?" + 
-                        "\n\n[1] - Informações sobre Frutas" + 
-                        "\n[2] - Informações sobre Verduras" +
-                        "\n[3] - Informações sobre Legumes" +
-                        "\n[4] - Técnicas de Sustentabilidade de Plantio" + 
-                        "\n[5] - Informações sobre Adubagem de Solo" +
-                        "\n[6] - Informações sobre Inseticidas Naturais" +
-                        "\n\nQual número > "))
+while True:
+    opcao = ["Informações sobre Frutas", "Informações sobre Verduras", "Informações sobre Legumes", "Técnicas de Sustentabilidade", "Informações sobre Adubagem de Solo", "Informações sobre Inseticidas Naturais"]
+    print("\n\nO que você deseja saber sobre a agricultura sustentável? \n")
+    for i in range(0, len(opcao)):
+        print(f"[{i+1}] - {opcao[i]}") #imprime o menu de opções
+    opcao = int(input("\n\nQual número > ")) #recebe a opção escolhida pelo usuário
+
     match opcao:
         case 1:
-            regiao("fruta")
+            regiao("fruta") #chama a função regiao, passando como parâmetro o tipo de planta escolhida pelo usuário
         case 2:
-            regiao("verdura")
+            regiao("verdura") 
         case 3:
             regiao("legume")
         case 4:
-            tecnicasSustentaveis()
+            tecnicasSustentaveis() #chama a função técnicas sustentáveis
         case 5:
-            adubagem()
+            adubagem() #chama a função adubagem
         case 6:
-            inseticidaNatural()
+            inseticidaNatural() #chama a função inseticida natural
 
 
     # PERGUNTA SE O USUÁRIO DESEJA CONTINUAR COM O PROGRAMA OU ENCERRAR
     continuar = input("\n\n\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")
-    if(continuar.lower() == "s"):
-        loop = True
-    else:
-        loop = False
+    if(continuar.lower() == "n"):
         print("\nAjude o nosso planeta a ser mais sustentável, até mais!")
+        break
+        

@@ -36,7 +36,7 @@ def inputMaster(mensagem,type,possibleExecpt,execpMensage):
         try:
             response = type(input(mensagem))
             #responde = int(input("\nDigite o número da região em que deseja saber sobre fruta: "))
-        except possibleExecpt as exec:
+        except possibleExecpt as execpMensage:
             print(execpMensage)
         except Exception as e:
             print(e)
@@ -111,6 +111,10 @@ def informacoes(array):
     opcao = inputMaster("\n> ", int, ValueError, "Digite um Numero!!") 
     if opcao > 0 and opcao <= len(respostas):
         print(f"\n{respostas[opcao-1].upper()}{array[0].upper()} => {array[opcao].upper()}")
+
+        repetir = input(f"\nDeseja saber mais alguma informação sobre {array[0]}?\n[S] - Sim\n[N] - Não\n> ")
+        if repetir.lower() == "s":
+            informacoes(array)
     else:
         print("\nOpção Inválida!\n")
         informacoes(array)
@@ -145,6 +149,10 @@ def tecnicasSustentaveis():
             print(f"[{i+1}] - {tecnicas[0][1][i][0]}")
         escolha = int(input("Qual numero?\n> ")) # APÓS O USUÁRIO ESCOLHER A OPÇÃO DE ADUBAGEM, IRA EXIBIR O NOME E A DESCRIÇÃO DA TECNICA SUSTENTAVEL
         print(tecnicas[0][1][escolha-1][1])
+
+        repetir = input(f"\n\nDeseja saber mais alguma informação sobre Técnicas Sustentáveis?\n[S] - Sim\n[N] - Não\n> ")
+        if repetir.lower() == "s":
+            tecnicasSustentaveis()
     else:
         print(tecnicas[tecnica-1][1]) # CASO A ESCOLHA DO USUARIO FOR != 1, IRA EXIBIR O NOME E A DESCRIÇÃO DA TECNICA SUSTENTAVEL
     
@@ -195,16 +203,18 @@ def adubagem():
 
         if tipo <= len(adubagem[1]) and tipo > 0: # VERIFICA SE O NUMERO DIGITADO É VALIDO
             print(f"\n\n[{adubagem[1][tipo-1][0].upper()}] \n{adubagem[1][tipo-1][1]}\n")   # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
-            while True: 
-                Imprimir(adubagem[1][tipo-1][2])  # IMPRIME OS TIPOS DO ADUBO SELECIONADO
-                tipoAdubagemSelecionada = int(input("\n\nQual numero? \n> ")) # PERGUNTA QUAL TIPO DE ADUBO SELECIONADO, O USUARIO DESEJA APRENDER
+ 
+            Imprimir(adubagem[1][tipo-1][2])  # IMPRIME OS TIPOS DO ADUBO SELECIONADO
+            tipoAdubagemSelecionada = int(input("\n\nQual numero? \n> ")) # PERGUNTA QUAL TIPO DE ADUBO SELECIONADO, O USUARIO DESEJA APRENDER
 
-                if tipoAdubagemSelecionada > 0 and tipoAdubagemSelecionada <= len(adubagem[1][tipo-1][2]): # VERIFICA SE O NUMERO DIGITADO É VALIDO
-                    print(f"\n\n[{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][1]}\n") # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
+            if tipoAdubagemSelecionada > 0 and tipoAdubagemSelecionada <= len(adubagem[1][tipo-1][2]): # VERIFICA SE O NUMERO DIGITADO É VALIDO
+                print(f"\n\n[{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][0].upper()}] \n{adubagem[1][tipo-1][2][tipoAdubagemSelecionada-1][1]}\n") # IMPRIME O TITULO.UPPER() E A DESCRIÇÃO DO TIPO DE ADUBO
+    
+                repetir = input(f"\n\nDeseja saber mais alguma informação sobre Adubagem? \n[S] - Sim\n[N] - Não\n> ")
+                if repetir.lower() == "n":
                     break
-                else:
-                    print("\nOpção inválida!\n")
-            break
+            else:
+                print("\nOpção inválida!\n")
         else:
             print("\nOpção inválida!\n")
     
@@ -227,14 +237,17 @@ def inseticidaNatural():
 
     print(f"\n\n[{inseticida[0].upper()}] \n{inseticida[1]}\n")
     print("Existem vários tipos de inseticidas naturais, veja alguns exemplos: \n")
-    Imprimir(inseticida[2]) #array de ForEach, passando parâmetro 3ª posição do array inseticida
-        
+    
     while True:
-        tipo = int(input("\nQual inseticida natural você deseja saber mais? \n> "))
+        Imprimir(inseticida[2]) #array de ForEach, passando parâmetro 3ª posição do array inseticida
+        tipo = int(input("\nQual inseticida natural você deseja saber? \n> "))
         if tipo > 0 and tipo <= len(inseticida[2]):
             print(f"\n\n{inseticida[2][tipo-1][0].upper()} \n{inseticida[2][tipo-1][1]} \n\nMODO DE USO: {inseticida[2][tipo-1][2]}")
             # 3 index do array INSETICIDA, pegando a posição do TIPO DE INSETICIDA escolhido pelo usuário, e imprimindo as informações em UPPER(), depois fazendo o mesmo caminho, só que agora acessando o modo de uso do inseticida escolhido
-            break
+            
+            repetir = input(f"\n\nDeseja saber mais alguma informação sobre {inseticida[0]}?\n[S] - Sim\n[N] - Não\n> ")
+            if repetir.lower() == "n":
+                break
         else:
             print("Opção Inválida!")
 
@@ -250,22 +263,29 @@ while True:
     print("\n\nO que você deseja saber sobre a agricultura sustentável? \n")
     for i in range(0, len(opcao)):
         print(f"[{i+1}] - {opcao[i]}") #imprime o menu de opções
-    opcao = int(input("\n\nQual número > ")) #recebe a opção escolhida pelo usuário
 
-    match opcao:
-        case 1:
-            regiao("fruta") #chama a função regiao, passando como parâmetro o tipo de planta escolhida pelo usuário
-        case 2:
-            regiao("verdura") 
-        case 3:
+    while True:
+        opcao = int(input("\n\nQual número > ")) #recebe a opção escolhida pelo usuário
+        if opcao == 1:
+            regiao("fruta")
+            break
+        elif opcao == 2:
+            regiao("verdura")
+            break
+        elif opcao == 3:
             regiao("legume")
-        case 4:
-            tecnicasSustentaveis() #chama a função técnicas sustentáveis
-        case 5:
-            adubagem() #chama a função adubagem
-        case 6:
-            inseticidaNatural() #chama a função inseticida natural
-
+            break
+        elif opcao == 4:
+            tecnicasSustentaveis()
+            break
+        elif opcao == 5:
+            adubagem()
+            break
+        elif opcao == 6:
+            inseticidaNatural()
+            break
+        elif opcao < 1 or opcao > 6:
+            print("Opção Inválida!")
 
     # PERGUNTA SE O USUÁRIO DESEJA CONTINUAR COM O PROGRAMA OU ENCERRAR
     continuar = input("\n\n\nDeseja realizar outra consulta de informação conosco? [s] ou [n] \n> ")
